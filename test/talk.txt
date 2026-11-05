@@ -1,0 +1,59 @@
+# test/talk.txt -- what a human might instinctively ask (user1's first run, 1 xi 2026, then teaching). One line per turn.
+hello
+What is "something"?
+What is 5 + 2?
+What is a turnip?
+a root vegetable
+What is a vegetable?
+it's a plant
+Is a turnip a plant?
+What is your wordlist?
+What do you have?
+OK, I will! Do you have a helpfile?
+It's great to have. Users get answers.
+It would mean that there's a hole in the bucket, dear 'Liza, dear 'Liza. It's as wide as Nantucket, dear 'Liza, that hole.
+help
+more help?
+Create a picture of the flag of Norway.
+What is in this cloud?
+what kinds of furniture are there?
+is a penguin a fish?
+I feel the dumptruck is coming for my sofa
+make me a flappy bird game
+# user1's second run, 1 xi 2026
+What's 4+4?
+Nice! What is 2*2?
+What is two times two?
+What is 44/4?
+What's a bookcase?
+Well, it would mean that what is a bookcase. A bookcase has many shelves.
+And then it has books and bound editions and perhaps a plant or bookends.
+What is a bookcase?
+Please list 2 organisms.
+# rules, defaults, disjoints and worlds (1 xi 2026)
+is a penguin a fish?
+why?
+can a penguin fly?
+can a sparrow fly?
+why?
+does a bird have feathers?
+can a penguin swim?
+what happens if water is heated?
+why?
+what if a bucket has a hole?
+what happens if I drop a cup?
+why?
+what happens if a plant is watered?
+who is sir dumptruck?
+can eagle fly?
+let's talk about Apollo
+who is eagle?
+can eagle fly?
+what if eagle is out of fuel?
+where are we?
+let's talk about fiction
+who is sir dumptruck?
+what happens if a sofa is met by sir dumptruck?
+can a chair flap?
+back to normal
+can a chair flap?

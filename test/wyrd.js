@@ -1,0 +1,20 @@
+const path = require('path');
+(async () => {
+  const chromium = require('@sparticuz/chromium').default, puppeteer = require('puppeteer-core');
+  const [pg, shot] = process.argv.slice(2);
+  const browser = await puppeteer.launch({ executablePath: await chromium.executablePath(), headless: 'shell', args: chromium.args.concat(['--no-sandbox', '--allow-file-access-from-files']) });
+  const page = await browser.newPage(); const errs = []; page.on('pageerror', e => errs.push(e.message));
+  await page.setViewport({ width: 1000, height: 1300 });
+  await page.goto('file://' + path.resolve(pg)); await page.evaluate(() => localStorage.clear()); await page.reload();
+  await page.waitForFunction(() => document.getElementById('i') && !document.getElementById('i').disabled);
+  const ask = async (q) => { await page.type('#i', q); await page.keyboard.press('Enter'); await new Promise(r => setTimeout(r, 100)); };
+  const click = async (sel) => { const b = await (await page.$(sel)).boundingBox(); await page.mouse.click(b.x + b.width / 2, b.y + b.height / 2); await new Promise(r => setTimeout(r, 250)); };
+  await click('#wyrd');
+  for (const q of ['What is a dog?', 'What is a teacher?', 'help', 'What happens if I drop a cup?']) await ask(q);
+  for (let i = 0; i < 4; i++) await click('#hue');
+  console.log('wyrd boards:', await page.$$eval('#o .w', e => e.length), '| pressed:', await page.$eval('#wyrd', e => e.getAttribute('aria-pressed')));
+  console.log(await page.$$eval('#o .w', e => e.map(x => x.textContent).join('\n---\n')));
+  await page.screenshot({ path: shot });
+  await page.$eval('#wyrd', e => e.scrollIntoView()); await click('#wyrd'); console.log('after off:', await page.$$eval('#o .w', e => e.length), 'pressed', await page.$eval('#wyrd', e => e.getAttribute('aria-pressed')));
+  console.log('errors:', errs.join(' | ') || 'none'); await browser.close();
+})();

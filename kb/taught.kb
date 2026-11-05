@@ -1,0 +1,436 @@
+; taught.kb -- cards from patty-cake, kept by your ruling
+; 2026-11-02T05-00-30 | What is a vice?
+;   before (answered): A vice is a kind of thing.
+;   after: A vice is a vice is an alternative to the main topic.
+(comment Vice "a vice is an alternative to the main topic")
+; 2026-11-02T05-00-30 | What is a going down?
+;   before (answered): A going down is an event is an descending event. It is a kind of movement. The kinds I know are falling proces
+;   after: A going down is a downward trend. It is a kind of movement. The kinds I know are falling process.
+(comment GoingDown "a downward trend")
+; 2026-11-02T05-00-30 | Is a small business a synthesis?
+;   before (unknown): Not that I know. A small business is a kind of business, and so of institution and of organization.
+;   after: Yes. A small business is a kind of synthesis (small business > synthesis).
+(genls SmallBusiness Synthesis)
+; 2026-11-02T05-00-30 | What is a pan?
+;   before (answered): A pan is a kind of thing. The kinds I know are pot.
+;   after: A pan is a flat, round cooking utensil used for spreading and heating food. The kinds I know are pot.
+(comment Pan "a flat, round cooking utensil used for spreading and heating food")
+; 2026-11-02T05-00-30 | Tell me about a chicken.
+;   before (answered): Yes. A chicken is a kind of bird, and so of animal and of organism.
+;   after: Yes. A chicken is a domesticated fowl with feathers and a beak. It is a kind of bird, and so of animal and of 
+(comment Chicken "a domesticated fowl with feathers and a beak")
+; 2026-11-02T05-00-30 | What is a cultural activity?
+;   before (answered): A cultural activity is a kind of thing. The kinds I know are competition, game event, political event, magic, 
+;   after: A cultural activity is an activity involving shared traditions and expressions of culture. The kinds I know ar
+(comment CulturalActivity "an activity involving shared traditions and expressions of culture")
+; 2026-11-02T05-00-30 | What is a going?
+;   before (answered): A going is A very general set of events in which an animal goes somewhere. The kinds I know are visit.
+;   after: A going is an event that occurs periodically. The kinds I know are visit.
+(comment Going "an event that occurs periodically")
+; 2026-11-02T05-00-30 | What is a set?
+;   before (answered): A set is a kind of thing.
+;   after: A set is a collection of distinct objects without any specific order.
+(comment Set "a collection of distinct objects without any specific order")
+; 2026-11-02T05-00-30 | Is an underwater a form?
+;   before (unknown): Not that I know. An underwater is a kind of thing.
+;   after: Yes. An underwater is a kind of form (underwater > form).
+(genls Underwater Form)
+; 2026-11-02T05-00-30 | Tell me about a sharing.
+;   before (asked): Yes. I have heard of sharings, but not what a sharing is. What is a sharing?
+;   after: Yes. A sharing is a kind of thing.
+(genls Sharing Giving)
+; 2026-11-02T05-00-30 | Tell me about a sharing.
+;   before (asked): Yes. I have heard of sharings, but not what a sharing is. What is a sharing?
+;   after: Yes. A sharing is a sharing involves giving something to others for mutual benefit.
+(comment Sharing "a sharing involves giving something to others for mutual benefit")
+; 2026-11-02T05-00-30 | What is a temperature change?
+;   before (answered): A temperature change is a kind of becoming. The kinds I know are heating.
+;   after: A temperature change is a variation in the measurement of heat and cold. It is a kind of becoming. The kinds I
+(comment TemperatureChange "a variation in the measurement of heat and cold")
+; 2026-11-02T05-00-30 | What is a weight?
+;   before (answered): A weight is a kind of device.
+;   after: A weight is a measurement of mass used to quantify the heaviness of objects. It is a kind of device.
+(comment Weight "a measurement of mass used to quantify the heaviness of objects")
+; 2026-11-02T05-00-30 | What is a smoking?
+;   before (answered): A smoking is a kind of thing.
+;   after: A smoking is a burning of tobacco.
+(comment Smoking "a burning of tobacco")
+; 2026-11-02T05-00-30 | Tell me about a determining.
+;   before (answered): Yes. A determining is a kind of thing. The kinds I know are going with.
+;   after: Yes. A determining is a determining factor is the key element that makes something happen or decide its outcom
+(comment Determining "a determining factor is the key element that makes something happen or decide its outcome")
+; 2026-11-02T05-00-30 | What is a pit?
+;   before (answered): A pit is a kind of depression, and so of region and of site.
+;   after: A pit is a hole or depression formed by something falling down. It is a kind of depression, and so of region a
+(comment Pit "a hole or depression formed by something falling down")
+; 2026-11-02T05-00-30 | Can an art supply break?
+;   before (unknown): I do not know whether an art supply breaks.
+;   after: Yes. Art supplies break.
+(default (ArtSupply ?x) => (breaks ?x))
+; 2026-11-02T05-00-30 | What is a bathroom?
+;   before (answered): A bathroom is a kind of thing.
+;   after: A bathroom is an indoor room used for personal hygiene and grooming.
+(comment Bathroom "an indoor room used for personal hygiene and grooming")
+; 2026-11-03T08-44-17 | Tell me about a controlling.
+;   before (answered): A controlling is a kind of thing. The kinds I know are treatment.
+;   after: A controlling is an act of control. The kinds I know are treatment.
+(comment Controlling "an act of control")
+; 2026-11-03T08-44-17 | What is a music?
+;   before (answered): Music is a particular sound produced by actions such as singing, whistling. It is a kind of movement. The kinds I know are house music and rock music.
+;   after: Music is an art. It is a kind of movement. The kinds I know are house music and rock music.
+(comment Music "an art")
+; 2026-11-03T08-44-17 | What is an agriculture?
+;   before (answered): An agriculture is a kind of thing.
+;   after: An agriculture is an industry.
+(comment Agriculture "an industry")
+; 2026-11-03T08-44-17 | Tell me about a human body.
+;   before (answered): A human body is a kind of body part.
+;   after: A human body is an intricate machine. It is a kind of body part.
+(comment HumanBody "an intricate machine")
+; 2026-11-03T08-44-17 | Tell me about an underwater.
+;   before (answered): An underwater is a kind of thing.
+;   after: An underwater is an ocean.
+(comment Underwater "an ocean")
+; 2026-11-03T08-44-17 | Can a pen break?
+;   before (unknown): I do not know whether a pen breaks.
+;   after: Yes. Pens break.
+(default (Pen ?x) => (breaks ?x))
+; 2026-11-03T08-44-17 | What happens if a giant is fed?
+;   before (unknown): I know of nothing that follows when the giant is fed.
+;   after: Then the giant grows.
+(rule (Giant ?x) (fed ?x) => (grows ?x))
+; 2026-11-03T08-44-17 | What is a former agent?
+;   before (asked): I have heard of former agents, but not what a former agent is. What is a former agent?
+;   after: A former agent is an ex agent.
+(comment FormerAgent "an ex agent")
+; 2026-11-03T08-44-17 | What is a time point?
+;   before (answered): A time point is a kind of time period.
+;   after: A time point is an instant. It is a kind of time period.
+(comment TimePoint "an instant")
+; 2026-11-03T08-44-17 | Tell me about an executive.
+;   before (answered): An executive is a kind of public official, and so of employee and of worker. The kinds I know are governor and mayor.
+;   after: An executive is an employee. It is a kind of public official, and so of employee and of worker. The kinds I know are governor and mayor.
+(comment Executive "an employee")
+; 2026-11-03T08-44-17 | Tell me about a resource.
+;   before (asked): I have heard of resources (a wood is one), but not what a resource is. What is a resource?
+;   after: A resource is an asset. The kinds I know are wood and bone tissue.
+(comment Resource "an asset")
+; 2026-11-03T08-44-17 | Can a tank float?
+;   before (unknown): I do not know whether a tank floats.
+;   after: Yes. Tanks float.
+(default (Tank ?x) => (floats ?x))
+; 2026-11-03T08-44-17 | Tell me about a going around.
+;   before (answered): A going around is a kind of thing.
+;   after: A going around is an adventure.
+(comment GoingAround "an adventure")
+; 2026-11-03T08-44-17 | What is a proposal?
+;   before (answered): A proposal is a kind of norm, and so of specification and of practice. The kinds I know are bill, accepted, and confirmed.
+;   after: A proposal is an offer. It is a kind of norm, and so of specification and of practice. The kinds I know are bill, accepted, and confirmed.
+(comment Proposal "an offer")
+; 2026-11-03T08-44-17 | Is a city official a government worker?
+;   before (unknown): Not that I know. A city official is a kind of public official, and so of employee and of worker.
+;   after: Yes. A city official is a kind of government worker (city official > government worker).
+(genls CityOfficial GovernmentWorker)
+; 2026-11-03T08-44-17 | Tell me about a channel.
+;   before (answered): A channel is a kind of region, and so of site.
+;   after: A channel is an open pipe. It is a kind of region, and so of site.
+(comment Channel "an open pipe")
+; 2026-11-03T08-44-17 | Tell me about a small town.
+;   before (answered): A small town is a kind of city, and so of region and of site.
+;   after: A small town is an oasis. It is a kind of city, and so of region and of site.
+(comment SmallTown "an oasis")
+; 2026-11-03T08-44-17 | Tell me about a map.
+;   before (answered): A map is a kind of visual work, and so of practice.
+;   after: A map is an idea. It is a kind of visual work, and so of practice.
+(comment Map "an idea")
+; 2026-11-03T08-44-17 | What happens if a sports car is heated?
+;   before (unknown): I know of nothing that follows when the sports car is heated.
+;   after: Then the sports car may overheat.
+(rule (SportsCar ?x) (heated ?x) => (may-overheat ?x))
+; 2026-11-03T08-44-17 | Can a partner swim?
+;   before (unknown): I do not know whether a partner swims.
+;   after: Yes. Partners swim.
+(default (Partner ?x) => (swims ?x))
+; 2026-11-03T08-44-17 | What is a bank charge?
+;   before (answered): A bank charge is a kind of economic agreement, and so of mandate and of norm.
+;   after: A bank charge is an extra fee. It is a kind of economic agreement, and so of mandate and of norm.
+(comment BankCharge "an extra fee")
+; 2026-11-03T08-44-17 | Tell me about a still life.
+;   before (answered): A still life is a kind of image, and so of document.
+;   after: A still life is an arrangement of objects. It is a kind of image, and so of document.
+(comment StillLife "an arrangement of objects")
+; 2026-11-03T08-44-17 | What is a grass?
+;   before (answered): Grass is a kind of grass family.
+;   after: Grass is an example. It is a kind of grass family.
+(comment Grass "an example")
+; 2026-11-03T08-44-17 | Tell me about a legal agreement.
+;   before (answered): A legal agreement is a kind of mandate, and so of norm and of specification. The kinds I know are contract, due, personal account, financial account, and license.
+;   after: A legal agreement is an enforceable contract. It is a kind of mandate, and so of norm and of specification. The kinds I know are contract, due, personal account, financial account, and license.
+(comment LegalAgreement "an enforceable contract")
+; 2026-11-03T08-44-17 | Can a quantum computer break?
+;   before (unknown): I do not know whether a quantum computer breaks.
+;   after: Yes. Quantum computers break.
+(default (QuantumComputer ?x) => (breaks ?x))
+; 2026-11-03T08-44-17 | What is a computer user?
+;   before (answered): A computer user is a kind of thing. The kinds I know are developer.
+;   after: A computer user is an information processor. The kinds I know are developer.
+(comment ComputerUser "an information processor")
+; 2026-11-03T08-44-17 | Can a bear swim?
+;   before (unknown): I do not know whether a bear swims.
+;   after: Yes. Bears swim.
+(default (Bear ?x) => (swims ?x))
+; 2026-11-03T08-44-17 | Tell me about a population.
+;   before (asked): I have heard of populations, but not what a population is. What is a population?
+;   after: A population is an ecosystem.
+(comment Population "an ecosystem")
+; 2026-11-03T08-44-17 | Tell me about a high ground.
+;   before (answered): A high ground is a kind of region, and so of site. The kinds I know are hill and fill.
+;   after: A high ground is an advantage. It is a kind of region, and so of site. The kinds I know are hill and fill.
+(comment HighGround "an advantage")
+; 2026-11-03T08-44-17 | Tell me about a holder.
+;   before (answered): A holder is a kind of thing. The kinds I know are arm.
+;   after: A holder is an empty vessel. The kinds I know are arm.
+(comment Holder "an empty vessel")
+; 2026-11-03T08-44-17 | What happens if a singer is fed?
+;   before (unknown): I know of nothing that follows when the singer is fed.
+;   after: Then the singer sings.
+(rule (Singer ?x) (fed ?x) => (sings ?x))
+; 2026-11-03T08-44-17 | What happens if a flower is broken?
+;   before (unknown): I know of nothing that follows when the flower is broken.
+;   after: Then the flower dies.
+(rule (Flower ?x) (broken ?x) => (dies ?x))
+; 2026-11-03T08-44-17 | Tell me about an online thing.
+;   before (answered): An online thing is a kind of buying, and so of exchange.
+;   after: An online thing is a lie. It is a kind of buying, and so of exchange.
+(comment OnlineThing "a lie")
+; 2026-11-03T08-44-17 | What is a physical path?
+;   before (asked): I have heard of physical paths (a route is one), but not what a physical path is. What is a physical path?
+;   after: A physical path is an obstacle. The kinds I know are route, channel, switch, and valve.
+(comment PhysicalPath "an obstacle")
+; 2026-11-03T08-44-17 | What happens if a guard is cold?
+;   before (unknown): I know of nothing that follows when the guard cold.
+;   after: Then the guard shivers.
+(rule (Guard ?x) (cold ?x) => (shivers ?x))
+; 2026-11-03T08-44-17 | What is a conference call?
+;   before (answered): A conference call is a kind of meeting, and so of social occasion. The kinds I know are video conference.
+;   after: A conference call is an annoyance. It is a kind of meeting, and so of social occasion. The kinds I know are video conference.
+(comment ConferenceCall "an annoyance")
+; 2026-11-03T08-44-17 | What is a survival?
+;   before (answered): A survival is a kind of goal, and so of text.
+;   after: A survival is an act. It is a kind of goal, and so of text.
+(comment Survival "an act")
+; 2026-11-03T08-44-17 | What happens if a media professional is cold?
+;   before (unknown): I know of nothing that follows when the media professional cold.
+;   after: Then the media professional shivers.
+(rule (MediaProfessional ?x) (cold ?x) => (shivers ?x))
+; 2026-11-03T08-44-17 | Tell me about a family movie.
+;   before (answered): A family movie is a kind of family work, and so of practice.
+;   after: A family movie is an adventure. It is a kind of family work, and so of practice.
+(comment FamilyMovie "an adventure")
+; 2026-11-03T08-44-17 | What is a describing?
+;   before (answered): A describing is a kind of explaining, and so of information transfer. The kinds I know are reporting.
+;   after: A describing is an adjective. It is a kind of explaining, and so of information transfer. The kinds I know are reporting.
+(comment Describing "an adjective")
+; 2026-11-03T08-44-17 | What is a being still?
+;   before (answered): A being still is a kind of thing.
+;   after: A being still is an angel.
+(comment BeingStill "an angel")
+; 2026-11-03T08-44-17 | Can a school building float?
+;   before (unknown): I do not know whether a school building floats.
+;   after: No. School buildings do not float.
+(except SchoolBuilding floats)
+; 2026-11-03T08-44-17 | What is a lake?
+;   before (answered): A lake is a kind of region, and so of site.
+;   after: A lake is an open mirror. It is a kind of region, and so of site.
+(comment Lake "an open mirror")
+; 2026-11-03T08-44-17 | Can a card game break?
+;   before (unknown): I do not know whether a card game breaks.
+;   after: Yes. Card games break.
+(default (CardGame ?x) => (breaks ?x))
+; 2026-11-03T08-44-17 | What is an online article?
+;   before (answered): An online article is a kind of article, and so of report and of situation report.
+;   after: An online article is a story. It is a kind of article, and so of report and of situation report.
+(comment OnlineArticle "a story")
+; 2026-11-03T08-44-17 | Tell me about a communicating.
+;   before (answered): A communicating is a kind of thing. The kinds I know are speaking, teaching, acting, warning, and dialogue.
+;   after: A communicating is an act of sharing. The kinds I know are speaking, teaching, acting, warning, and dialogue.
+(comment Communicating "an act of sharing")
+; 2026-11-03T08-44-17 | What happens if a mouse is cold?
+;   before (unknown): I know of nothing that follows when the mouse cold.
+;   after: Then the mouse shivers.
+(rule (Animal ?x) (cold ?x) => (shivers ?x))
+; 2026-11-03T08-44-17 | What is an economic support?
+;   before (answered): An economic support is a kind of quantity.
+;   after: An economic support is an aid. It is a kind of quantity.
+(comment EconomicSupport "an aid")
+; 2026-11-03T08-44-17 | Can a transport facility break?
+;   before (unknown): I do not know whether a transport facility breaks.
+;   after: Yes. Transport facilities break.
+(default (TransportFacility ?x) => (breaks ?x))
+; 2026-11-03T08-44-17 | What happens if a flower is heated?
+;   before (unknown): I know of nothing that follows when the flower is heated.
+;   after: Then the flower may wither.
+(rule (Flower ?x) (heated ?x) => (may-wither ?x))
+; 2026-11-03T08-44-17 | Can a concrete break?
+;   before (unknown): I do not know whether a concrete breaks.
+;   after: Yes. Concretes break.
+(default (Concrete ?x) => (breaks ?x))
+; 2026-11-03T08-44-17 | What is a rock music?
+;   before (answered): A rock music is a kind of music, and so of movement.
+;   after: A rock music is an art form. It is a kind of music, and so of movement.
+(comment RockMusic "an art form")
+; 2026-11-03T08-44-17 | Tell me about a water well.
+;   before (answered): A water well is a kind of well, and so of site.
+;   after: A water well is an underground water source. It is a kind of well, and so of site.
+(comment WaterWell "an underground water source")
+; 2026-11-03T08-44-17 | Tell me about a connecting.
+;   before (answered): A connecting is a kind of thing.
+;   after: A connecting is an important link.
+(comment Connecting "an important link")
+; 2026-11-03T08-44-17 | What happens if a tape is heated?
+;   before (unknown): I know of nothing that follows when the tape is heated.
+;   after: Then the tape may melt.
+(rule (Tape ?x) (heated ?x) => (may-melt ?x))
+; 2026-11-03T08-44-17 | What happens if a designer is fed?
+;   before (unknown): I know of nothing that follows when the designer is fed.
+;   after: Then the designer becomes hungry.
+(rule (Designer ?x) (fed ?x) => (becomes-hungry ?x))
+; 2026-11-03T08-44-17 | What is a phone book?
+;   before (answered): A phone book is a kind of reference work, and so of practice.
+;   after: A phone book is an obsolete necessity. It is a kind of reference work, and so of practice.
+(comment PhoneBook "an obsolete necessity")
+; 2026-11-03T08-44-17 | What is a drug treatment?
+;   before (answered): A drug treatment is a kind of medical treatment, and so of work.
+;   after: A drug treatment is an effective option. It is a kind of medical treatment, and so of work.
+(comment DrugTreatment "an effective option")
+; 2026-11-03T08-44-17 | Tell me about a chapter.
+;   before (answered): A chapter is a kind of practice.
+;   after: A chapter is an adventure. It is a kind of practice.
+(comment Chapter "an adventure")
+; 2026-11-03T08-44-17 | Can a major fly?
+;   before (answered): No. A major is an animal. Animals do not fly.
+;   after: Yes. Majors fly.
+(default (Major ?x) => (flies ?x))
+; 2026-11-03T08-44-17 | What happens if an elephant is hungry?
+;   before (unknown): I know of nothing that follows when the elephant hungry.
+;   after: Then the elephant eats.
+(rule (Animal ?x) (hungry ?x) => (eats ?x))
+; 2026-11-03T08-44-17 | Tell me about a force.
+;   before (answered): A force is a kind of thing. The kinds I know are falling process.
+;   after: A force is an unbalanced push or pull. The kinds I know are falling process.
+(comment Force "an unbalanced push or pull")
+; 2026-11-03T08-44-17 | What is a light thing?
+;   before (asked): I have heard of light things, but not what a light thing is. What is a light thing?
+;   after: A light thing is an idea.
+(comment LightThing "an idea")
+; 2026-11-03T08-44-17 | Can a giant talk?
+;   before (answered): Yes. A giant is a person. People talk.
+;   after: Yes. Giants talk.
+(default (Giant ?x) => (talks ?x))
+; 2026-11-03T08-44-17 | Can a secretary fly?
+;   before (answered): No. A secretary is an animal. Animals do not fly.
+;   after: No. Secretaries do not fly.
+(except Secretary flies)
+; 2026-11-03T08-44-17 | What is a second?
+;   before (answered): A second is a kind of date, and so of time period.
+;   after: A second is an eternity. It is a kind of date, and so of time period.
+(comment Second "an eternity")
+; 2026-11-03T08-44-17 | Tell me about a freedom.
+;   before (answered): A freedom is a kind of emotion, and so of quantity.
+;   after: A freedom is an unfettered choice. It is a kind of emotion, and so of quantity.
+(comment Freedom "an unfettered choice")
+; 2026-11-03T08-44-17 | Tell me about a washing.
+;   before (answered): A washing is a kind of cleaning, and so of removing and of movement.
+;   after: A washing is an act. It is a kind of cleaning, and so of removing and of movement.
+(comment Washing "an act")
+; 2026-11-03T08-44-17 | What is an album?
+;   before (answered): An album is a kind of practice.
+;   after: An album is an art. It is a kind of practice.
+(comment Album "an art")
+; 2026-11-03T08-44-17 | What is a yard?
+;   before (answered): A yard is a kind of solid ground, and so of region and of site.
+;   after: A yard is an area. It is a kind of solid ground, and so of region and of site.
+(comment Yard "an area")
+; 2026-11-03T08-44-17 | What is an oil well?
+;   before (answered): An oil well is a kind of production well, and so of well and of site.
+;   after: An oil well is a hole. It is a kind of production well, and so of well and of site.
+(comment OilWell "a hole")
+; 2026-11-03T08-44-17 | Tell me about a software object.
+;   before (answered): A software object is a kind of practice. The kinds I know are software.
+;   after: A software object is an encapsulated data structure. It is a kind of practice. The kinds I know are software.
+(comment SoftwareObject "an encapsulated data structure")
+; 2026-11-03T08-44-17 | Can an agent walk?
+;   before (answered): Yes. An agent is a mammal. Mammals walk.
+;   after: Yes. Agents walk.
+(default (Agent ?x) => (walks ?x))
+; 2026-11-03T08-44-17 | Can a drive train break?
+;   before (unknown): I do not know whether a drive train breaks.
+;   after: Yes. Drive trains break.
+(default (DriveTrain ?x) => (breaks ?x))
+; 2026-11-03T08-44-17 | Tell me about a celebrating.
+;   before (answered): A celebrating is a kind of thing. The kinds I know are social.
+;   after: A celebrating is an act. The kinds I know are social.
+(comment Celebrating "an act")
+; 2026-11-03T08-44-17 | Tell me about a court record.
+;   before (answered): A court record is a kind of practice.
+;   after: A court record is an official document. It is a kind of practice.
+(comment CourtRecord "an official document")
+; 2026-11-03T08-44-17 | What is a conversation?
+;   before (answered): A conversation is a kind of speaking. The kinds I know are interscintillation and discussing.
+;   after: A conversation is an exchange of ideas. It is a kind of speaking. The kinds I know are interscintillation and discussing.
+(comment Conversation "an exchange of ideas")
+; 2026-11-03T08-44-17 | What happens if a nurse is cold?
+;   before (unknown): I know of nothing that follows when the nurse cold.
+;   after: Then the nurse shivers.
+(rule (Nurse ?x) (cold ?x) => (shivers ?x))
+; 2026-11-03T08-44-17 | What is a portal?
+;   before (asked): I have heard of portals (a valve is one), but not what a portal is. What is a portal?
+;   after: A portal is an open door. The kinds I know are valve.
+(comment Portal "an open door")
+; 2026-11-03T08-44-17 | What is a terrorist?
+;   before (answered): A terrorist is a kind of criminal, and so of worker and of person.
+;   after: A terrorist is an enemy of peace. It is a kind of criminal, and so of worker and of person.
+(comment Terrorist "an enemy of peace")
+; 2026-11-03T08-44-17 | What is a biological cell?
+;   before (asked): I have no card for "biological cell" yet. What is a biological cell?
+;   after: A biological cell is a kind of container, and so of artifact.
+(genls BiologicalCell Container)
+; 2026-11-03T08-44-17 | What is a code?
+;   before (answered): A code is a kind of norm, and so of specification and of practice.
+;   after: A code is an answer. It is a kind of norm, and so of specification and of practice.
+(comment Code "an answer")
+; 2026-11-03T08-44-17 | What is a lens?
+;   before (asked): I have heard of lenses, but not what a lens is. What is a lens?
+;   after: Lens are an eye.
+(comment Lens "an eye")
+; 2026-11-03T08-44-17 | What is information transfer?
+;   before (answered): An information transfer is a kind of thing. The kinds I know are check, watching, medical test, recording, and drama.
+;   after: An information transfer is an exchange of data. The kinds I know are check, watching, medical test, recording, and drama.
+(comment InformationTransfer "an exchange of data")
+; 2026-11-03T08-44-17 | What is a tectonic plate?
+;   before (asked): I have no card for "tectonic plate" yet. What is a tectonic plate?
+;   after: A tectonic plate is a kind of lithosphere.
+(genls TectonicPlate Lithosphere)
+; 2026-11-03T08-44-17 | What is a general point?
+;   before (answered): A general point is a characteristic attribute of a human construction. It is a kind of site. The kinds I know are control point.
+;   after: A general point is an idea. It is a kind of site. The kinds I know are control point.
+(comment GeneralPoint "an idea")
+; 2026-11-03T08-44-17 | What is evaluating?
+;   before (answered): An evaluating is a kind of thing. The kinds I know are performance testing and performance review.
+;   after: An evaluating is an assessment. The kinds I know are performance testing and performance review.
+(comment Evaluating "an assessment")
+; 2026-11-03T08-44-17 | What is a directed route?
+;   before (answered): A directed route is a kind of route, and so of physical path. The kinds I know are battery.
+;   after: A directed route is an ordered sequence of nodes. It is a kind of route, and so of physical path. The kinds I know are battery.
+(comment DirectedRoute "an ordered sequence of nodes")
+; 2026-11-04T04-21-53 | What is a satellite?
+;   before (answered): A satellite is a kind of military platform, and so of transportation device and of device.
+;   after: A satellite is a man-made orbiting military platform. It is a kind of military platform, and so of transportation device and of device.
+;   amended by your ruling, from: (comment Satellite "a man-made orbiting military platform")
+(comment Satellite "an orbiting body.")
+; 2026-11-04T04-21-53 | What is a satellite?
+;   before (answered): A satellite is a kind of military platform, and so of transportation device and of device.
+;   after: A satellite is a man-made equipment that orbits around the earth or the moon. It is a kind of military platform, and so of transportation device and of device.
+;   from Open English WordNet 2025 (CC BY 4.0, en-word.net)
+;   amended by your ruling, from: (comment Satellite "man-made equipment that orbits around the earth or the moon")
+(comment Satellite "any body which orbits another.")

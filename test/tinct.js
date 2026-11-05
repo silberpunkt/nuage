@@ -1,0 +1,23 @@
+const path = require('path');
+(async () => {
+  const chromium = require('@sparticuz/chromium').default, puppeteer = require('puppeteer-core');
+  const [pg, shot] = process.argv.slice(2);
+  const browser = await puppeteer.launch({ executablePath: await chromium.executablePath(), headless: 'shell', args: chromium.args.concat(['--no-sandbox', '--allow-file-access-from-files']) });
+  const page = await browser.newPage(); const errs = []; page.on('pageerror', e => errs.push(e.message));
+  await page.setViewport({ width: 1000, height: 1300 });
+  await page.goto('file://' + path.resolve(pg)); await page.evaluate(() => localStorage.clear()); await page.reload();
+  await page.waitForFunction(() => document.getElementById('i') && !document.getElementById('i').disabled);
+  const ask = async (q) => { await page.type('#i', q); await page.keyboard.press('Enter'); await new Promise(r => setTimeout(r, 100)); };
+  for (const q of ['What is a chair?', 'What is a dog?', 'What happens if I drop a cup?', 'Why?', 'What is a teacher?', 'help']) await ask(q);
+  const click = async (sel) => { const b = await (await page.$(sel)).boundingBox(); await page.mouse.click(b.x + b.width / 2, b.y + b.height / 2); await new Promise(r => setTimeout(r, 200)); };
+  for (let i = 0; i < 4; i++) await click('#hue');
+  console.log('mode:', await page.$eval('#hue', e => e.textContent), '| sliders shown:', await page.$eval('#g', e => !e.hidden), '| tinted spans:', await page.$$eval('#o .n span[style]', e => e.length));
+  console.log('sample colours:', await page.$$eval('#o .n span[style]', e => [...new Set(e.map(x => x.style.color))].slice(0, 6).join(' ')));
+  await page.$eval('#vv', e => { e.value = 1.5; e.dispatchEvent(new Event('input')); }); await page.$eval('#ll', e => { e.value = 1.2; e.dispatchEvent(new Event('input')); });
+  await new Promise(r => setTimeout(r, 200));
+  console.log('after sliders:', await page.$$eval('#o .n span[style]', e => [...new Set(e.map(x => x.style.color))].slice(0, 4).join(' ')), '| filter:', await page.$eval('#o', e => e.style.filter));
+  await page.screenshot({ path: shot });
+  await click('#hue'); console.log('cycled to:', await page.$eval('#hue', e => e.textContent), '| sliders hidden:', await page.$eval('#g', e => e.hidden), '| filter:', JSON.stringify(await page.$eval('#o', e => e.style.filter)));
+  await click('#hue'); console.log('then:', await page.$eval('#hue', e => e.textContent), '| omnia spans:', await page.$$eval('#o .n span[style]', e => e.length));
+  console.log('errors:', errs.join(' | ') || 'none'); await browser.close();
+})();

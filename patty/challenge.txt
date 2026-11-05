@@ -1,0 +1,71 @@
+# challenge.txt -- questions a person might simply ask, written to trouble and tickle Nuage (1 xi 2026).
+# One per line; "# heading" starts a group. node patty/challenge.js sorts every answer and reports each group.
+# kinds and parts
+What is a bicycle?
+Is a bicycle a vehicle?
+Does a bicycle have wheels?
+How many legs does a dog have?
+Does a fish have legs?
+What is a tree made of?
+What is the opposite of hot?
+Is a tomato a fruit or a vegetable?
+Is a whale a fish?
+Is a bat a bird?
+Can a bat fly?
+Is a spider an insect?
+What do cows eat?
+Where do fish live?
+# properties and commonsense
+What colour is the sky?
+What colour is grass?
+Is ice cold?
+Is fire hot?
+Can a chair walk?
+Can a dog talk?
+Can a person fly?
+Can a car fly?
+Can a boat float?
+What happens if ice is heated?
+What happens if milk is spilled?
+What happens if a glass is dropped?
+What happens if a car is out of fuel?
+What happens if a plant gets no water?
+Why do birds fly?
+Why is the sky blue?
+# people and places
+Who are you?
+Who made you?
+What is your name?
+Where are you?
+What is a country?
+What is a city?
+What is a doctor?
+What does a doctor do?
+What is a family?
+# time and number
+What day is it?
+What time is it?
+What year is it?
+How many days are in a week?
+How many hours are in a day?
+What is 12 times 12?
+What is 100 divided by 8?
+What is 20 percent of 150?
+What is the square root of 144?
+Is 7 a prime number?
+# language and play
+What does hello mean?
+Tell me a joke.
+Tell me a story.
+Sing me a song.
+What rhymes with cat?
+How do you spell necessary?
+# feelings and talk
+I am sad.
+I am happy today.
+I like dogs.
+Do you like music?
+Are you alive?
+Are you a computer?
+What can you do?
+Goodbye.

@@ -1,0 +1,12 @@
+; pictures.txt -- written by pack/paint.js in painted chat (YAM-PAL). Do not edit by hand: the marks are not for hands.
+(picture "nuage" "NUAGE
+⠀⠀⠀⠀⠀╭───╮
+⠀╭───╯⠀⠀⠀╰─╮
+╭╯⠀⠀⠀⠀⠀⠀⠀⠀⠀╰╮
+╰───────────╯
+⠀⠀.̝.̜.̜.̜.̜.̜")
+(in-mt FictionMt (picture "sir dumptruck" "SIR⠀DUMPTRUCK
+⠀▄▄▄▄▄▄▄▄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀████████▙▄▄⠀⠀⠀⠀⠀⠀⠀
+⠀▀◉▀▀▀▀◉▀▀◉▀⠀▁▂▁▂▁⠀
+⠀⠀.̞.̩.̗̣.̝.̗̟.̭.̗̠.̗̠"))

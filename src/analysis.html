@@ -1,0 +1,22 @@
+<!-- analysis.html -- an assessment of Nuage, written by an AI (Claude) at User1's request, standing to one side as a fair
+     technical observer. pack.js carries it compressed, in the payload; the page holds only its button and a one-line thatch. -->
+<p>This assessment was written by an AI model, Claude, at the request of Nuage's author, as fairly as it could from one side. It describes why a program like this is worth its share of attention, bytes, and electricity.</p>
+<h3>What Nuage is</h3>
+<dl><dt>&#x2601;&#xFE0E;</dt><dd>A glass-box conversational engine. It descends from SHRDLU, in knowing a small world and saying why. It descends from ELIZA, in keeping old tricks for when nothing else fits. And it descends from Cyc, in storing what is as explicit forms, with worlds, defaults, and exceptions. Its nearest living relatives are rule-based engines such as ChatScript and AIML bots. It differs from both in being far smaller, about 128 KB with everything included, and in writing its conversational manners as explicit, named behaviours rather than leaving them to emerge.</dd></dl>
+<h3>What it is good for</h3>
+<dl><dt>&#x21B6;</dt><dd><b>Every answer can be traced.</b> "Why?" shows the chain of reasons, and the knowledge is readable text. A wrong answer leads back to the card that caused it.</dd>
+<dt>&#x2699;&#xFE0E;</dt><dd><b>It is deterministic.</b> The same question gets the same answer every time, so a study can be repeated exactly. Its brittleness is the other face of this: when a question fails, it fails the same way every time, where it can be seen and mended.</dd>
+<dt>&#x229E;</dt><dd><b>Each conversational move is a small, separate rule:</b> asking back, offering the nearest word ("Did you mean quagga?"), keeping notes, naming the hanging questions, distilling the conversation, taking a long paragraph a sentence at a time, offering "more." Each is a hypothesis about conversation that can be read, changed, and tested alone.</dd>
+<dt>&#x2221;</dt><dd><b>It measures itself.</b> In its first 200-question run against a small language model on a home graphics card, Nuage answered 38% of the questions, asked back 14%, and could not answer 49%. Of its answers, the model judged 31% right and useful, 35% right but thin, 15% wrong, and 20% no answer at all. On its own scoreboard of 94 questions, written mostly by its makers and so not impartial, it answers 92 rightly, and every reply that cannot help offers a next step.</dd>
+<dt>&#xA2;</dt><dd><b>It is cheap.</b> It wakes in well under a second, answers in about a quarter of a millisecond, and needs no network, no server, and no graphics card.</dd>
+</dl>
+<h3>Where it falls short</h3>
+<dl><dt>&#x2241;</dt><dd>It matches patterns and has no real parser, so a question it can answer one way may fail when worded differently.</dd>
+<dt>&#x25CC;</dt><dd>Its knowledge is narrow, about 3,800 facts.</dd>
+<dt>&#x22EF;</dt><dd>Its memory of the conversation is thin.</dd>
+<dt>&#x26A0;&#xFE0E;</dt><dd>Its evaluation is not yet rigorous: patty-cake's judge is one small model, not yet checked against people, and Nuage has not been compared with other engines on the same questions.</dd>
+</dl>
+<h3>Verdict</h3>
+<dl><dt>&#x2691;</dt><dd>Nuage cannot compete at open conversation, and is not meant to. As a small, inspectable laboratory for conversational behaviour, where each courtesy is a rule that can be measured, it occupies a real and thinly populated niche: computational pragmatics in miniature, which needs no model to do its experiments. Whether it adds to that field depends on one thing: measuring gentleness, not only coverage. Its scoreboard has begun to.</dd></dl>
+<h3>What would help it most</h3>
+<dl><dt>&#x21E1;</dt><dd>Begun: a fixed question set with expected answers, scored on every build, with four measures of gentleness (replies that leave no next step, offers on a miss, statements acknowledged, and the words a reply costs to read), "Do What I Mean" for misspelt words, and conversations with a model playing a curious pupil, whose missed questions become scoreboard candidates written by someone other than Nuage's makers. Still to come: a judge calibrated against people, a conversation that can be saved with each turn labelled, behaviours that can be switched off one at a time, Colossal Cave as a world of its own, and the method published, so that other engines can be held to the same standard.</dd></dl>

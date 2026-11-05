@@ -1,0 +1,147 @@
+# score.txt -- the scoreboard's questions. "question => pattern" is scored: the reply must match the pattern (a regular
+# expression, case ignored). A line without "=>" is said but not scored, to set up what follows. "# heading" starts a
+# group, and each group starts a fresh Nuage. Written to be fair: an expectation is the right answer, not what Nuage
+# happens to say, so a failure here is a true failure. Add questions freely; the totals are only worth what the set is.
+# kinds
+What is a chair? => seat
+Is a stool a kind of furniture? => ^yes
+Is a penguin a fish? => ^no
+Is a whale a fish? => ^no
+Is a tomato a fruit? => ^yes
+Is a spider an insect? => ^no
+What kinds of furniture are there? => table|bed|seat
+# the same, said otherwise
+What's a chair? => seat
+Tell me about chairs. => seat
+What do you know about chairs? => seat
+Do you know what a chair is? => seat
+Define chair. => seat
+A chair is what? => seat
+# commonsense
+Can a penguin fly? => ^no
+Can a sparrow fly? => ^yes
+Why? => bird
+What happens if water is heated? => boil
+What happens if I drop a cup? => break
+Is ice cold? => ^yes
+Why is the sky blue? => scatter
+How many legs does a dog have? => four
+# number and time
+What is six times seven, plus one? => 43
+What is 15 percent of 80? => 12
+Is 7 a prime number? => ^yes
+What day is it? => clock
+# learning
+What is a turnip? => what is a turnip
+A root vegetable. => now i know|thank
+Is a turnip a plant? => turnip
+What have I taught you? => turnip
+# do what I mean
+What is a chiar? => did you mean chair
+Yes. => seat for one person
+What is a quaga? => did you mean quagga
+# conversation
+What is a flumbleboot? => what is a flumbleboot
+What are our hanging questions? => flumbleboot
+Any questions? => flumbleboot
+My aunt has a chair. She likes tea. What is a kettle? Is a table furniture? => container
+Notes. => noted|nothing
+What have we talked about? => so far
+# worlds
+Who is Sir Dumptruck? => fiction
+Let's talk about fiction. => fiction
+Who is Sir Dumptruck? => flattens
+Back to normal. => ordinary
+# flags
+Tell me about the flag of Nepal. => crimson|pennon
+What flags do you know? => nepal
+Draw the flag of Noniland. => do not know the flag of noniland
+# outside the cloud
+What will the weather be tomorrow? => no window|network
+Write me a poem. => cannot|not yet|only talk
+Draw a horse. => can only draw
+# harder
+Are penguins birds? => ^yes
+Do penguins fly? => ^no
+Could a penguin swim? => ^yes
+Name three animals. => ,
+Which is bigger, a dog or a mouse? => dog
+Is a chair a kind of table? => ^no
+What is the plural of mouse? => mice
+What is a chair for? => sit
+Where do fish live? => water
+What do cows eat? => grass
+# following along
+What is a penguin?
+Can it fly? => ^no
+Does it have wings? => ^yes
+What is water?
+What happens if it is heated? => boil
+# from the pupils
+Where do penguins live? => coast|ice|south
+What do penguins eat? => fish
+# the hypothetical
+What is a sontimeter? => hypothetical
+Let's talk about the hypothetical. => hypothetical
+What does a sontimeter measure? => three dials
+Why? => private word
+Back to normal. => ordinary
+# from your session
+What is imagination? => picture what is not
+What is an imaginary unit? => ^the imaginary unit
+Is an imaginary number a number? => ^yes
+# from Qwen's and Gemma's pupils
+What is a black hole? => gravity
+Is it a star? => ^not that i know|^no
+What do you mean by "no card"? => small fact
+Can you tell me what a quantum computer is? => qubits
+Where do stars come from? => nebulae
+Can you tell me about the greenhouse effect? => warming
+Do you know what the Big Bang theory is? => 13.8 billion
+
+# the kitchen and the studio
+Can I drink milk with spicy curry to stop the heat? => milk.*soothes the heat
+Why is a chili hot? => capsaicin
+Nuage, can you explain what a crescendo is? => growing louder
+Nuage, can you explain what a flumbatrix is? => What is a flumbatrix\?
+Can you tell me how to mix colors in watercolor? => wet on wet
+What are the techniques of watercolor? => glazing
+What is a color? => ^A color is a kind of physical property
+
+# the listening ring
+Do stars twinkle because the air moves? => note of what you suppose
+Does an engine make things move by burning fuel? => note of what you suppose
+notes => You supposed that an engine makes things move by burning fuel
+What is a penguin? => bird
+Why? => What made you wonder\?
+
+# colignity
+2 > 1. => ^It is\.$
+Is 2 > 1? => ^Yes, it is\.
+2 + 2 = 5. => It is not\. 2 \+ 2 is 4
+Is ten greater than three? => ^Yes
+
+# from the magazines on the porch
+Can I speak to a human? => ^Yes, indirectly
+Is there a person there? => people who made me
+Are you a real person? => ^No\. I am a program
+Why do stars twinkle? => moving layers of air
+Why do stars shine? => fuse hydrogen
+
+# being told
+Things are not alive. => ^I have noted that things are not alive\.$
+Entities are alive. => ^I have noted that entities are alive\.$
+Is a thing alive? => ^No\.
+A worm is an entity. => now i know a worm is a kind of entity
+Is a worm alive? => ^Yes\. .*entities are alive
+Alive means conscious and present in a body. => what alive means: conscious
+What is alive? => conscious.*entities.* are alive
+Each water droplet is a waterdrop. => now i know a water droplet is a kind of waterdrop
+A dish holds food in a bowl. => a dish holds food
+What is a dish? => holds food
+What is quality? => qualities
+A purification excuses nonessentials. => ^I have noted that a purification excuses nonessentials\.$
+Colignity is mutual alignment. Alignment is geometric. => colignity is mutual alignment\. I have noted that alignment is geometric\.
+Please know, I used to be aboard a ship. I still am, in a way. => ^(?!.*still is a kind)
+What is a body? => frame
+An entity is a thing with a nature. => now i know an entity is a thing with a nature\.$

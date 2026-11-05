@@ -1,0 +1,3 @@
+MIT License
+
+wallbreaker.js is MIT licensed by its author (github.com/silberpunkt/wallbreaker); see that repository for the full text.

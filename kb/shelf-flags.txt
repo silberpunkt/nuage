@@ -1,0 +1,135 @@
+; shelf-flags.txt -- Flags of Our World, a shelf: packed in its own block, read in only when a flag is first asked about.
+<vext> The flag of Norway
+  A red field
+    charged with
+    a dark blue Scandinavian cross
+      fimbriated in white.
+      The vertical part is shifted to the hoist side,
+        in the style of the Dannebrog,
+      with an official proportion of
+        8:11 for the civil flag,
+        16:27 for the state and war flags.
+  Designer: Fredrik Meltzer.
+    Adoption: approved 13 July 1821
+      for use in coastal waters,
+      and became the full national flag
+        on 10 December 1898.
+  Colour elements:
+    The cross division follows a ratio
+      of 6:1:2:1:12 horizontally
+      and 6:1:2:1:6 vertically.
+  Colour standards: legally defined as
+    deep red and dark blue,
+      commonly standardized as
+        PMS 200 (red) and
+        PMS 281 (blue).
+<vext> The flag of Denmark
+  A red field
+    charged with a white Scandinavian cross,
+      its upright shifted to the hoist side.
+  Called the Dannebrog, the Danish cloth.
+    By legend it fell from the sky
+      at the Battle of Lyndanisse, in 1219.
+    It is held to be the oldest national flag still in use.
+  Proportions: 28:37.
+    The cross divides it 12:4:21 across
+      and 12:4:12 down.
+<vext> The flag of Nepal
+  A double pennon, a concave pentagon:
+    two right-angled triangular pennons of unequal size,
+      the smaller set atop the larger,
+      sharing a common upright hoist edge.
+  The field is crimson (#DC143C).
+    The whole outline is bordered in deep blue (#003893),
+      of uniform width.
+    The upper pennon bears a white crescent moon,
+      with eight of its sixteen rays showing.
+    The lower pennon bears a white sun,
+      with twelve triangular rays.
+  Proportion:
+    The crimson field alone is 4 to 3, height to width.
+    With the blue border added,
+      the height is 1.21901 times the width.
+      That number is the least positive root of a quartic polynomial.
+        It is irrational, and no simple fraction expresses it.
+  Construction:
+    The flag is not defined by a fixed ratio.
+      It is defined by a compass-and-straightedge construction,
+        laid out in Schedule 1 of the Constitution of Nepal (2015).
+      It begins with a horizontal baseline,
+        and derives every vertex, arc, and the border's width from it.
+  Symbolism, by the constitution's text:
+    Crimson stands for bravery,
+      and for the rhododendron (Rhododendron arboreum),
+        the national flower.
+    Blue stands for peace.
+    The moon stands for the calm, temperate nature
+      of the Nepali people.
+    The sun stands for their fierce, aggressive temperament.
+  Adopted on 16 December 1962.
+    Its modern form was standardised by the civil engineer Shankar Nath Rimal,
+      at the request of King Mahendra.
+<vext> The banner of Jeanne d'Arc
+  A vexillum, with a swallowtail.
+  A rectangular banner of white boucassin,
+    a stiffened linen canvas,
+  3 feet high and 12 feet long,
+    a proportion of 1 to 4,
+  ending in a swallowtail of two points.
+  The whole outline is fringed in silk,
+    componée, in alternating gold and white threads,
+    about 1 inch (2.5 cm) wide.
+  The obverse, the "King of Heaven" side:
+    The field is sown with gold fleurs-de-lys,
+      set parallel to the hoist.
+    In the broadest part, nearest the pole,
+      is the Apocalyptic Christ, Christ in Majesty.
+        He is seated upon a rainbow, within an iridescent golden mandorla,
+        His wounds in the hands, feet, and side shown,
+        and He wears a light red tunic and a bright red cloak.
+    His left hand holds the world, a blue sphere.
+      His right hand is raised in blessing.
+    Two kneeling angels flank Him,
+      in white tunics, with red-and-white wings.
+      At His right is Saint Michael, the angel of justice,
+        bearing a sword.
+      At His left is Saint Gabriel, the angel of mercy,
+        presenting a natural lily.
+    The words "Jhesus Maria"
+      are written in gold letters toward the tail.
+  The reverse:
+    The Virgin and Child,
+      with a shield bearing the arms of France,
+        azure, three fleurs-de-lys or,
+        held by two angels,
+      and a dove bearing in its beak a small streamer,
+        inscribed "De par le Roy du Ciel,"
+          "By command of the King of Heaven."
+  Making and provenance:
+    It was commissioned in 1429 from Hamish Power (Hauves Poulnoir),
+      a Scottish banner painter in Tours,
+      at a cost of 25 livres tournois,
+        by the accounts of the Treasurer of War, Hémon Raguier.
+  It was blessed at the Church of Saint-Sauveur, in Tours,
+      before the relief of Orléans.
+    The cloth was of a single thickness,
+      so the gold leaf of the lettering and the fleurs-de-lys
+        was laid on both faces,
+      before the painted figures were laid on the obverse alone.
+  Symbolism:
+    The white field and the fleurs-de-lys
+      assert French sovereignty.
+    The Apocalyptic Christ signals divine judgment
+      upon the English occupiers.
+    The motto, Jhesus Maria, is borrowed from the mendicant orders,
+      the Dominicans, Franciscans, Carmelites, and Augustinians,
+      who formed the clergy of her army.
+    The white banner
+      was a deliberate answer to the English red cross,
+      signifying that England was subject to France,
+        not the reverse.
+  Fate:
+    The banner was burned during the French Revolution.
+    No original survives. Every surviving image is a later reconstruction.
+    "I loved my banner forty times better than my sword,"
+      said Jeanne at her trial, in 1431.

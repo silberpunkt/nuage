@@ -1,0 +1,221 @@
+prelude: |
+  THE CLOUD AND THE THIRD PLATE -- a deck of word-cards from the making of Nuage, a
+  small talking cloud of about a hundred kilobytes, with no model inside. These are
+  the words that were found, or coined, while User1, a small engine, two models on
+  a home graphics card, and Claude rubbed against one another like Whitworth's
+  plates. Composed by Claude, at User1's asking. Regularized form; graded by
+  yowl_check.py before anyone saw it. quiet + plur.
+
+recipe: |
+  Read THE FEATHER first. Everything after is what the feather does when it is
+  let go: it sparks, it shakes hands, it is rubbed true between three plates, it
+  is shelved and thatched, it is asked after by a pupil, and at the last it turns.
+
+palette:
+  - "ink        #cfcbc2"
+  - "gold       #e0b050"
+  - "breath     #bfeae0"
+  - "stone      #8f98a5"
+  - "white      #f4f1ea"
+  - "rose       #d98a9c"
+  - "sky        #9fc6ff"
+
+cards:
+  - section: THE CLOUD
+    word: NUAGE
+    anglo: Noo-ahzh
+    art:
+      - "      ╭───╮          "
+      - "  ╭───╯   ╰─╮        "
+      - " ╭╯         ╰╮       "
+      - " ╰───────────╯       "
+      - "   128 KB · no model "
+    paint: "!ink ╭─╮╯╰=sky 128KB·nomdel=stone"
+    from: "French nuage (cloud), from Latin nubes -- a classic chat engine of about a hundred kilobytes, with no model inside"
+    say: "A small talking cloud that asks rather than guesses, offers rather than detours, and says I made a note of it rather than falling silent."
+
+  - section: THE FEATHER
+    word: PROPOSITION
+    anglo: Pro-placing
+    art:
+      - "          ❧          "
+      - "        ·   ·        "
+      - "   ↗           ↖     "
+      - "  ◓             ◓    "
+      - " ─────────────────── "
+    paint: "!ink ❧=white ·=breath ↗↖=breath ◓=gold ─=stone"
+    from: "Latin pro-ponere (to put before) -- kin: propose, purpose, posit; the lightest imposition upon another's will"
+    say: "Two parties blow one white feather up as it falls, as if playing netless volleyball, and a proposition is the feather: placed before, and left to fall."
+    longtext: |
+      Rough, direct speech can only be settled by force. A proposition is held up
+      for reflection and let go. Robin Lakoff put the rules in three: do not impose,
+      give options, make the other feel good. Brown and Levinson measured the weight
+      of an imposition, and polite speech keeps it small. The feather is all of that
+      at once, and it travels whole: in a letter, by a lamp, or by voice.
+
+  - word: COOPSYS
+    anglo: Co-op-sees
+    art:
+      - "          *          "
+      - "       ↗     ↖       "
+      - "    ↗           ↖    "
+      - " [.][.]       [.][.] "
+      - "    come see this    "
+    paint: "!ink *=gold ↗↖=breath [].=white comesthi=stone"
+    from: "co-op + system, or four eyes reading together: iiii -- User1's sigil; declarative pointing, made a habit"
+    say: "Not a firing line, many eyes on a target each alone, but hey, come see this: many eyes on one shared thing, each knowing the others see it too."
+
+  - word: SCINTIL
+    anglo: Sin-till
+    art:
+      - "   ☼  ·  ·  ✦  ·  ☼  "
+      - "  ▄█▄           ▄█▄  "
+      - " ▀▀▀▀▀         ▀▀▀▀▀ "
+      - " ~~~~~~~~~~~~~~~~~~~ "
+      - "   word      T   T   "
+    paint: "!ink ☼=gold ·✦=white ▄█▀=stone ~=sky wordT=breath"
+    from: "Latin scintilla (a spark) -- one flash of an Aldis lamp; the receiver answers each word with a long flash, a T"
+    say: "One spark of an interscintillation: a single small acknowledgement that narrows the error between two minds and costs the channel almost nothing."
+
+  - word: HANDSHAKE
+    anglo: Hand-shake
+    art:
+      - " ▣ DIS  I can 9600 → "
+      - "   ← DCS  try 9600   "
+      - " ▣ TCF ░░░░░░░░░ →   "
+      - "   ← CFR  let's go   "
+      - "   or FTT, and 4800  "
+    paint: "!stone ▣=gold ←→=breath ░=sky"
+    from: "ITU T.30, the fax handshake -- the receiver says what it can do, the sender proposes, the receiver confirms or asks for less"
+    say: "Two machines agree how to talk before they talk, and when the training fails they step down a speed and try again, gently."
+
+  - section: THE PLATES
+    word: THIRD PLATE
+    anglo: Third-plate
+    art:
+      - "  ▬▬▬▬▬     ▬▬▬▬▬    "
+      - "    A    ⇄    B      "
+      - "      ⇘       ⇙      "
+      - "        ▬▬▬▬▬        "
+      - "          C          "
+    paint: "!ink ▬=white ABC=gold ⇄⇘⇙=breath"
+    from: "Joseph Whitworth's three-plate method, 1840s -- two plates can agree in a shared curve; a third breaks the agreement"
+    say: "No curve can fit all three pairs at once, only flatness can, so a true surface is made with no reference at hand, only patience and the third plate."
+    longtext: |
+      Two plates rubbed only against each other settle into a perfect match without
+      either being flat, one slightly convex and the other slightly concave. Rub A on B,
+      B on C, C on A, and the shared errors cannot survive. Conversation works the
+      same way: two parties may agree in a curvature; a third, a person beside a
+      model and a small engine, shows it.
+
+  - word: CONSENSE
+    anglo: Con-sense
+    art:
+      - "    ◯           ◯    "
+      - "      ╲       ╱      "
+      - "          ⊕          "
+      - "      ╱       ╲      "
+      - "    ◯           ◯    "
+    paint: "!ink ◯=stone ╲╱=breath ⊕=gold"
+    from: "con- (with) + sensus (feeling) -- rarer and humbler than consensus; arrived at, never voted"
+    say: "The shared sense two or more parties come to by many small exchanges, scintil by scintil, until each can stand on what the others feel."
+
+  - section: THE SHELF
+    word: THATCH
+    anglo: Thatch
+    art:
+      - "        ╱╲           "
+      - "      ╱    ╲         "
+      - "    ╱  ⋀⋀⋀⋀  ╲       "
+      - "  About Nuage        "
+      - "    A small talking  "
+    paint: "!stone ╱╲⋀=gold AboutNuagsmlki=white"
+    from: "Old English thæc (a roof covering) -- a title, and two spaces in, what lies below"
+    say: "A plain-text summary set at the top of compressed content, the lightest promise, kept within its own budget so that a reader knows whether to unpack."
+
+  - word: SHELF
+    anglo: Shelf
+    art:
+      - " ═══════════════════ "
+      - "  ▤ ▤ ▥ ▤   flags    "
+      - " ═══════════════════ "
+      - "  ◎ ✦ ☼ ◌   sky      "
+      - " ═══════════════════ "
+    paint: "!ink ═=stone ▤▥=rose ◎✦☼◌=gold flagssky=breath"
+    from: "Old English scylfe (a ledge, a plank) -- also the name the three bars of a menu forgot they had"
+    say: "Knowledge kept apart in its own block and read in only when first asked about, so the core stays small and the rest waits within reach."
+
+  - word: MUNUS
+    anglo: Moo-nuss
+    art:
+      - "   ◈ ──────────→     "
+      - "                  ◈  "
+      - "   ◈ ←──────────     "
+      - "   com · munus       "
+      - "   = communis        "
+    paint: "!ink ◈=gold ─→←=breath commun·is==stone"
+    from: "Latin munus (a gift, a duty, an office), from a root meaning to change, to swap -- with com-, communis"
+    say: "The thing exchanged in every turn of talk, a gift that is also a duty, and the root inside the word communication."
+
+  - section: THE PUPILS
+    word: PUPIL
+    anglo: Pew-pill
+    art:
+      - "      ╭─────╮        "
+      - "      │  ◉  │        "
+      - "      ╰─────╯        "
+      - " > What is a black_  "
+      - "   ♪♪ ♪♪♪ ♪ ♪♪  ↵    "
+    paint: "!ink ╭─╮│╰╯=stone ◉=gold >=breath ♪=gold ↵=breath"
+    from: "Latin pupilla (a little doll: the small image of yourself seen in another's eye) -- a model playing a school pupil"
+    say: "A language model picks a topic from its lessons and asks Nuage six plain questions, then says whether it was satisfied, and its misses become our questions."
+
+  - word: SCANATURE
+    anglo: Scan-ature
+    art:
+      - " Awake in 812 ms.    "
+      - " stars black holes   "
+      - " · ●●?●●X            "
+      - "   ● answered        "
+      - "   ? asked  X missed "
+    paint: "!stone ●=gold ?=breath X=rose"
+    from: "scan + signature -- coined here: the gist of a conversation in marks, for rapid, preverbal review"
+    say: "Each conversation kept as gist, the things most asked about and a mark a turn, read first on waking so Nuage begins one pitch further along the thread."
+
+  - section: THE HYPOTHETICAL
+    word: SONTIMETER
+    anglo: Son-timmeter
+    art:
+      - "  ◔   ◑   ◕     ●    "
+      - "  │   │   │     │    "
+      - "  SPACE STATUS       "
+      - "  upper right        "
+      - "  the Captain knew   "
+    paint: "!stone ◔◑◕=breath ●=rose"
+    from: "the Exaspera, 1977, a series that never was -- the Captain's private word, never told to anyone"
+    say: "Three dials and one light in the upper right of the Space Status panels, a simple read, and no enemy could answer a word he had never heard."
+
+  - section: THE TURN
+    word: IMAGINARY
+    anglo: Im-ajinary
+    art:
+      - "          i          "
+      - "          ↑          "
+      - "   -1 ←───┼───→ 1    "
+      - "          ↓          "
+      - "         -i          "
+    paint: "!ink i=gold ↑↓←→─┼=stone -1=breath"
+    from: "Descartes, 1637, half in scorn -- multiply by i and a number turns a quarter-turn; twice, and it points the other way"
+    say: "Not fictional but perpendicular: real at right angles to the line we usually measure along, and needed by alternating current and by the quantum alike."
+
+  - word: SPINNETRY
+    anglo: Spin-netry
+    art:
+      - "       ╭───╮         "
+      - "      ╱     ╲        "
+      - "     │   ◎   │       "
+      - "    ╱_________╲      "
+      - "  |--\\--\\--\\--\\-->   "
+    paint: "!ink ╭─╮╱╲│_=gold ◎=white |\\->=stone"
+    from: "spin + symmetry -- coined here: what is turned about an axis is the same all the way round, the ring, the bowl, the bell"
+    say: "A circle on a nail returns to where it started, a thread returns one pitch further on, and a good conversation is a thread, not a circle."
