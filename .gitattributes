@@ -1,0 +1,6 @@
+# What Linguist should not count as her language: the packed pages are built by pack/ from src/, the gallery is drawn by
+# words/teardown.js, and vendor/ is other houses' work. What is left is the source, which is JavaScript.
+dist/** linguist-generated
+words/gallery.html linguist-generated
+vendor/** linguist-vendored
+patty/mimia/mimia.bin binary
