@@ -27,7 +27,7 @@ const FILES = [].concat(
 ).filter((f) => fs.existsSync(path.join(ROOT, f)));
 
 // ---- a clean slate, but the hand-kept files stay
-const KEEP = ['README.md', 'LICENSE', 'docs', 'index.html', 'media', '.nojekyll', '.git'];   // and the site's own files, and git's
+const KEEP = ['README.md', 'LICENSE', 'docs', 'index.html', 'media', '.nojekyll', '.gitattributes', '.git'];   // and the site's own files, and git's
 if (fs.existsSync(OUT)) for (const f of fs.readdirSync(OUT)) if (!KEEP.includes(f)) fs.rmSync(path.join(OUT, f), { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 let total = 0; const went = [];

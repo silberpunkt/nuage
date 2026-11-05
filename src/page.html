@@ -83,6 +83,10 @@ h1{font-size:1.2rem;font-weight:normal;letter-spacing:.3em;color:var(--head);mar
 #sb{font-size:13px;line-height:1.5;color:var(--dim);padding:.1rem 1rem .2rem;display:flex;gap:1rem;align-items:center;position:relative;border-top:1px solid var(--line)}
 #l{color:var(--desc);margin:0;min-height:1.5em}#sb #gist{position:absolute;bottom:100%;left:1rem;right:1rem;margin:0;background:var(--bg);padding:.4rem .8rem;box-shadow:0 -6px 18px rgba(0,0,0,.35)}
 #o{flex:1;min-height:0;overflow-y:auto;padding-left:.6rem;padding-right:.4rem}#o.gutter{padding-left:2.4rem}   /* the conversation scrolls; the title, the bar, the entry box and the switches stay in view */
+/* ON A PAD (User1, 5 xi 2026): a finger gets one scroll, the page's own, and no belt within a belt. The page is asked whether its
+   pointer is coarse, not what it calls itself; the talk then runs down the page, the chat line and the status bar stay at the foot, and the
+   left column stands above the talk at full width. */
+@media (pointer:coarse){body{height:auto;min-height:100dvh}#main{flex-direction:column}#lc{width:auto;overflow:visible}#split{display:none}#o{flex:none;min-height:40vh;overflow-y:visible}#pk{overflow-y:visible}#f{position:sticky;bottom:0;background:var(--bg);padding:.4rem 0 .3rem;z-index:4}#sb{position:sticky;bottom:0}}
 button,select,input:not([type=checkbox]):not([type=range]){border-radius:4px;margin:2px}
 button{background:var(--btn);border:1px solid var(--btnline);color:var(--btnink);font:inherit;padding:.15rem .6rem;cursor:pointer}
 button:disabled,select:disabled{border-style:solid;border-color:var(--line);color:var(--dim);background:transparent;cursor:default;opacity:1}   /* disabled: dropped to grey, plainly, and no dashes */
