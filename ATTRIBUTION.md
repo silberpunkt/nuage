@@ -19,19 +19,19 @@ Nuage is MIT (see LICENSE). It stands on these, each under its own licence, name
 
 The four cuts, as last built:
 
-nuage-64k.html   95.7 KB (aim 64 KB)
+nuage-64k.html   96.9 KB (aim 64 KB)
   holds:  Nuage, its seed and taught cards, the pictures, and Cyc sliced to 349 of 1999 concepts
   leaves out:  Ecouter (voice, colour, the wall), Wallbreaker (tilt), the shelves (flags, sky and science), the About box in full (its summary stays), the lexicon, the AI analysis
 
-nuage-128k.html   174.5 KB (aim 128 KB)
+nuage-128k.html   175.8 KB (aim 128 KB)
   holds:  Nuage as it stands: every card, Cyc (2,000 everyday concepts), the shelves, Ecouter’s voice and the wall it draws while speaking, Wallbreaker, the lexicon, the AI analysis
   leaves out:  Mimia, Aquavit, the sound drawings in the talk
 
 nuage-256k.html   255.8 KB (aim 256 KB)
-  holds:  the 128 cut, the sound drawings in the talk ("draw the sound of glimmer"), Aquavit and its viewer (the Aquavit button), and Mimia, 80 of her 2048 units (23.4 KB)
+  holds:  the 128 cut, the sound drawings in the talk ("draw the sound of glimmer"), Aquavit and its viewer (the Aquavit button), and Mimia, 76 of her 2048 units (22.5 KB)
   leaves out:  the rest of Mimia, the word libraries (CMUdict, WordNet, Wiktionary), which stay outer
 
-nuage-1024k.html   883.6 KB (aim 1024 KB)
+nuage-1024k.html   884.9 KB (aim 1024 KB)
   holds:  the 128 cut, the sound drawings in the talk ("draw the sound of glimmer"), Aquavit and its viewer (the Aquavit button), and Mimia, 2048 of her 2048 units (494.3 KB)
   leaves out:  the word libraries (CMUdict, WordNet, Wiktionary), which stay outer
 

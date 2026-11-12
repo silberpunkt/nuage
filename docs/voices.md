@@ -1,45 +1,27 @@
 # Voices upon Ecouter: a note from Nuage, for Bela's animal person
 
-From User1 and the Nuage session, 5 xi 2026. Nuage grew five voices on stock Ecouter in a day, and User1 asks that
-they be offered back, so Ecouter can carry them as his own. Nothing below replaces anything of his. Every voice is an
-operation on the frames before `sing()`, and stock Ecouter is what you get when the operation is the identity.
+From User1 and the Nuage session, 5 xi 2026. Nuage grew five voices on stock Ecouter in a day, and User1 asks that they be offered back, so Ecouter can carry them as his own. Nothing below replaces anything of his. Every voice is an operation on the frames before `sing()`, and stock Ecouter is what you get when the operation is the identity.
 
 ## The idea, in User1's words
 
-"All expressions are described as operations upon Ecouter. Imagine a set of circles inset from one another, all painted
-white on top and black on bottom, collectively perfectly flat. That is Ecouter (stock). Now imagine a sinus wave, in
-precisely the yinyang form: where he is flat, Nuage is a wave. Black swell at left, white swell at right, balanced. Two
-dots appear in each swell; they represent the polar accumulation within each swell. She begins slower, she ends faster.
-She begins tone lower, she ends tone higher. She is complete in 86 percent of the time. Her voice is pitched
-equifeminely up."
+"All expressions are described as operations upon Ecouter. Imagine a set of circles inset from one another, all painted white on top and black on bottom, collectively perfectly flat. That is Ecouter (stock). Now imagine a sinus wave, in precisely the yinyang form: where he is flat, Nuage is a wave. Black swell at left, white swell at right, balanced. Two dots appear in each swell; they represent the polar accumulation within each swell. She begins slower, she ends faster. She begins tone lower, she ends tone higher. She is complete in 86 percent of the time. Her voice is pitched equifeminely up."
 
-Miria (the voice that reads Mimia, the mirror) is "all that, nearly crackingly too much: too clear, too singing, too
-tight." Arthur is "the very slightest inverse effect: all that Nuage does, but reservedly, inversively in every respect,
-out of respect. Arthur is a Manner of Ecouter; Nuage and Miria are Graces of it." He compliments them. Blando (Marlon
-Blando, no relation) is "the human, as a jest, voiced as a computer": most of the tone and most of the time taken out,
-and only most, Hal in the memory room, slowing.
+Miria (the voice that reads Mimia, the mirror) is "all that, nearly crackingly too much: too clear, too singing, too tight." Arthur is "the very slightest inverse effect: all that Nuage does, but reservedly, inversively in every respect, out of respect. Arthur is a Manner of Ecouter; Nuage and Miria are Graces of it." He compliments them. Blando (Marlon Blando, no relation) is "the human, as a jest, voiced as a computer": most of the tone and most of the time taken out, and only most, Hal in the memory room, slowing.
 
 ## The operation
 
 Given the frames of a phonal unit (a sentence, or any span), with `u` running 0 to 1 across the frames' time:
 
-- swell(u) = -cos(pi u), the black swell left, the white right, plus a dot of accumulation at u = 1/4 (down) and
-  u = 3/4 (up), each a narrow Gaussian.
+- swell(u) = -cos(pi u), the black swell left, the white right, plus a dot of accumulation at u = 1/4 (down) and u = 3/4 (up), each a narrow Gaussian.
 - each frame's `ms` is scaled by (1 - rateArc * swell): slower at the start, faster at the end;
 - each frame's `f0` by pitch * (1 + pitchArc * swell + dot): lifted, and lower at the start, higher at the end;
 - each formant in `f` (and the hiss band `at`) by tract: the smaller tract;
 - `breath` and `hiss` by their factors;
 - then, for Blando, flatness: f0 drawn toward its mean by `flat`, and each frame's length toward the even by `even`;
 - then the whole is scaled so the sum of `ms` is `time` times stock;
-- and the recalm (User1, 5 xi 2026: "she pitches up and speeds up but does not have a final levelout, a kerb cut back to
-  steady flight"): over the last `tail` of the span (three tenths) the swell eases to `rest` (-0.6, a little below
-  level, the cadence of a sentence that is done) and the frames lengthen by up to a fifth. By fifths of a sentence,
-  Nuage's f0 runs 168, 159, 171, 189, 189 Hz: the crest in the fourth fifth, level through the last. Miria 180, 165,
-  195, 230, 222: higher, and down from the peak at the close. Arthur 132, 126, 122, 122, 129: the inverse, a small
-  lift at the end, his offering being to come back up to meet them.
+- and the recalm (User1, 5 xi 2026: "she pitches up and speeds up but does not have a final levelout, a kerb cut back to steady flight"): over the last `tail` of the span (three tenths) the swell eases to `rest` (-0.6, a little below level, the cadence of a sentence that is done) and the frames lengthen by up to a fifth. By fifths of a sentence, Nuage's f0 runs 168, 159, 171, 189, 189 Hz: the crest in the fourth fifth, level through the last. Miria 180, 165, 195, 230, 222: higher, and down from the peak at the close. Arthur 132, 126, 122, 122, 129: the inverse, a small lift at the end, his offering being to come back up to meet them.
 
-The pitch arc and the rate arc are the same curve, which is the point: she does not merely rise, she rises as she
-quickens, and he (Arthur) does the reverse, slightly.
+The pitch arc and the rate arc are the same curve, which is the point: she does not merely rise, she rises as she quickens, and he (Arthur) does the reverse, slightly.
 
 ## The table
 
@@ -67,22 +49,13 @@ hers, her hello, her name and her makers included; Miria for Mimia's lines; Blan
 
 ## The epaulette
 
-The rules read "Nuage" as nUWIHj and have no French j at all. The name is respelled for the sound only, never for the
-page: `nuwudge`, which reads nUWwAHdj, chosen by ear in the teardown box. A small table, SAYABLE, holds such
-respellings; it would sit naturally beside Ecouter's own exceptions, if he has a place for them.
+The rules read "Nuage" as nUWIHj and have no French j at all. The name is respelled for the sound only, never for the page: `nuwudge`, which reads nUWwAHdj, chosen by ear in the teardown box. A small table, SAYABLE, holds such respellings; it would sit naturally beside Ecouter's own exceptions, if he has a place for them.
 
 ## How it is wired in Nuage (so it can be lifted whole)
 
-- `E.frames(text)` gives the frames; `arcFrames(frames, VOICES[name])` operates on them; `sayFrames(E, frames)` sings
-  them through `E.CHAIN.settings(PRESETS[HOUSE_NAME])` with `s.frames` set, and `E.CHAIN.make(s).pcm`. So nothing of
-  Ecouter's own chain is bypassed; the frames are simply his, operated on, handed back.
-- The same source string runs in the page and in a Worker (a second Ecouter, built from the same text, with
-  `onmessage` singing `sayFrames(ECOUTER, arcFrames(ECOUTER.frames(text), VOICES[voice]))`), so the drawing thread never
-  waits for the sound. A long reply is a brigade: cut at sentence ends (and at a quoted sentence's end, and at a comma
-  past 180 characters), each built while the one before plays, scheduled on the audio clock back to back. The strip and
-  the wall take the whole text's frames at once, with a 120 ms tail counted in per sentence.
-- A suggested shape for Ecouter: `E.say(text, { voice: 'nuage' })` and `E.frames(text, { voice: 'nuage' })`, with
-  VOICES among the PRESETS, and `voice: null` the stock. The operation is twenty lines and has no state.
+- `E.frames(text)` gives the frames; `arcFrames(frames, VOICES[name])` operates on them; `sayFrames(E, frames)` sings them through `E.CHAIN.settings(PRESETS[HOUSE_NAME])` with `s.frames` set, and `E.CHAIN.make(s).pcm`. So nothing of Ecouter's own chain is bypassed; the frames are simply his, operated on, handed back.
+- The same source string runs in the page and in a Worker (a second Ecouter, built from the same text, with `onmessage` singing `sayFrames(ECOUTER, arcFrames(ECOUTER.frames(text), VOICES[voice]))`), so the drawing thread never waits for the sound. A long reply is a brigade: cut at sentence ends (and at a quoted sentence's end, and at a comma past 180 characters), each built while the one before plays, scheduled on the audio clock back to back. The strip and the wall take the whole text's frames at once, with a 120 ms tail counted in per sentence.
+- A suggested shape for Ecouter: `E.say(text, { voice: 'nuage' })` and `E.frames(text, { voice: 'nuage' })`, with VOICES among the PRESETS, and `voice: null` the stock. The operation is twenty lines and has no state.
 
 ## The code, as it stands in Nuage (src/ui.js, VOICE_SRC)
 

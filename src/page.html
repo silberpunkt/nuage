@@ -85,8 +85,11 @@ h1{font-size:1.2rem;font-weight:normal;letter-spacing:.3em;color:var(--head);mar
 #o{flex:1;min-height:0;overflow-y:auto;padding-left:.6rem;padding-right:.4rem}#o.gutter{padding-left:2.4rem}   /* the conversation scrolls; the title, the bar, the entry box and the switches stay in view */
 /* ON A PAD (User1, 5 xi 2026): a finger gets one scroll, the page's own, and no belt within a belt. The page is asked whether its
    pointer is coarse, not what it calls itself; the talk then runs down the page, the chat line and the status bar stay at the foot, and the
-   left column stands above the talk at full width. */
-@media (pointer:coarse){body{height:auto;min-height:100dvh}#main{flex-direction:column}#lc{width:auto;overflow:visible}#split{display:none}#o{flex:none;min-height:40vh;overflow-y:visible}#pk{overflow-y:visible}#f{position:sticky;bottom:0;background:var(--bg);padding:.4rem 0 .3rem;z-index:4}#sb{position:sticky;bottom:0}}
+   left column stands above the talk at full width.
+   (12 xi 2026) The left column no longer stands above the talk: it waits behind the four-pixel bar at the talk's left edge, lit
+   to the Send button's line colour, and a tap brings it out over 78 percent of the width, a blank margin at its left.
+   (It stands above Wallbreaker's tilt keys, which are set very high, or they would show through its margin.) */
+@media (pointer:coarse){body{height:auto;min-height:100dvh}#lc{position:fixed;left:0;top:0;bottom:0;width:78vw;z-index:2147483600;background:var(--bg);overflow-y:auto;padding:.8rem .6rem 1rem 1.8rem;box-shadow:0 0 0 100vmax rgba(0,0,0,.5)}#vr{flex-wrap:wrap}#split{position:relative;z-index:2147483601;cursor:pointer;background:var(--btnline);opacity:1}#split:after{content:"";position:absolute;inset:0 -12px}#lc:not(.closed)~#split{position:fixed;left:78vw;top:0;bottom:0}#o{flex:none;min-height:40vh;overflow-y:visible}#pk{overflow-y:visible}#f{position:sticky;bottom:0;background:var(--bg);padding:.4rem 0 .3rem;z-index:4}#sb{position:sticky;bottom:0}}
 button,select,input:not([type=checkbox]):not([type=range]){border-radius:4px;margin:2px}
 button{background:var(--btn);border:1px solid var(--btnline);color:var(--btnink);font:inherit;padding:.15rem .6rem;cursor:pointer}
 button:disabled,select:disabled{border-style:solid;border-color:var(--line);color:var(--dim);background:transparent;cursor:default;opacity:1}   /* disabled: dropped to grey, plainly, and no dashes */
@@ -102,7 +105,9 @@ summary{cursor:pointer;color:var(--dim);padding:.15rem 0}summary:focus-visible{o
 #nm{all:unset;cursor:pointer;letter-spacing:inherit;color:inherit}#nm:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
 .bx{width:min(46rem,94vw);max-height:90vh;padding:0;background:var(--bg);color:var(--ink);border:1px solid var(--btnline);font:1rem/1.5 ui-monospace,Consolas,"Cascadia Mono",monospace}
 .bx::backdrop{background:rgba(0,0,0,.65)}.bx>div{padding:0 1.4rem 1.2rem}
-.bx #lx-o{margin:0 .5rem 0 auto}.bx #ai-o{margin:0 auto 0 0}.bx header{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;background:var(--bg);border-bottom:1px solid var(--line);padding:.6rem 1.4rem}
+#about header{flex-wrap:wrap;justify-content:flex-start;gap:.2rem}#about #ab-h{position:absolute;left:-999rem}#about #ab-x{margin-left:auto;min-width:2rem;font-weight:bold}#ab-tabs{display:flex;flex-wrap:wrap;gap:.1rem}   /* four tabs, which wrap if they must, and an X at the upper right (User1) */
+.nbc{display:inline-flex;align-items:center;white-space:nowrap;flex:none}   /* a label and its controls are one thing and wrap as one (User1) */
+.bx header{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;background:var(--bg);border-bottom:1px solid var(--line);padding:.6rem 1.4rem}
 .bx h2{font-size:1.2rem;font-weight:normal;letter-spacing:.3em;color:var(--head);margin:0}
 .bx dl{display:grid;grid-template-columns:4.3rem 1fr;margin:1rem 0}.bx dt{font-size:2.7rem;line-height:1;text-align:center;color:var(--fieldink);border-right:1px solid var(--line);padding:.5rem .6rem 0 0}
 .bx dt.four{font-size:1.6rem;padding-top:.9rem}.bx dt.two{letter-spacing:-.15em;font-size:2.2rem;padding-top:.75rem}.bx dd{margin:0;padding:.4rem 0 .9rem 1rem}.bx b{font-weight:normal;color:var(--head)}.bx i{color:var(--dim);font-style:normal}.bx .dk{text-align:center;font-size:2.4rem;line-height:1;color:var(--dim);margin:1.2rem 0}.bx h3{scroll-margin-top:4rem;font-size:1.1rem;font-weight:normal;letter-spacing:.15em;color:var(--head)}.bx .th{white-space:pre-wrap;font:inherit;margin:1rem 0}.bx small{display:block;font-size:.88em;color:var(--note);margin-top:.35rem}.bx a{color:inherit;text-decoration:none;border:1px solid var(--ring);border-radius:5px;padding:0 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}.bx a:hover,.bx a:focus-visible{border-color:var(--focus);outline:0}
