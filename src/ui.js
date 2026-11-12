@@ -27,7 +27,7 @@ const { N, unpack, H, lab, t0, $ } = C;
 // the conversation's own styles ride in the payload, compressed: the page's head keeps only what must show before waking (the bar, the title, the About box)
 document.head.insertAdjacentHTML('beforeend', '<style>' + '#o .qt{cursor:pointer;text-decoration:underline dotted;text-underline-offset:.2em}#o .qt:hover{color:var(--ink)}#o div{margin:0 0 .6rem;white-space:pre-wrap}#o .u{color:var(--user)}#o .u:before{content:"You: "}#o .pu:before{content:"Pupil: "}#o .n{color:#e6e9ec}[data-theme=day] #o .n{color:var(--ink)}#o .n:before{content:"Nuage: ";background:linear-gradient(90deg,var(--head),var(--user));-webkit-background-clip:text;background-clip:text;color:transparent}#o .n.canon:before{content:"Canon: "}#o .m{color:var(--dim)}#o .h{color:var(--head);margin:1.2rem 0 .6rem;border-top:1px solid var(--line);padding-top:.6rem}#f,#t{display:flex;flex-wrap:wrap;gap:.3rem;margin:.6rem 0}#vr{display:inline-flex;align-items:center;gap:0}#vr .lbl{color:var(--desc);margin:0 .3rem 0 2px}#vr button+button{margin-left:0}#f{margin:.4rem 0 1px}#f button{margin-bottom:0}#f #i{margin-bottom:0}#i{flex:1 1 14rem;background:var(--btn);border:1px solid var(--btnline);color:var(--user);font:inherit;padding:.3rem .6rem}#i::placeholder{color:var(--dim);opacity:1}#i::placeholder{color:var(--dim)}::highlight(nu-thing){color:#9cc7dd;text-decoration:underline solid var(--under)}[data-theme=dusk] ::highlight(nu-thing){color:#a9d3ea}[data-theme=day] ::highlight(nu-thing){color:#1d5878}#o{position:relative}#rings{position:absolute;left:0;top:0;width:0;height:0}#hd #nm{border:2px solid transparent;border-radius:5px;margin:-1px -3px;padding:1px 3px;box-sizing:border-box}#hd #nm:hover{border-color:var(--head)}#hd:has(#nm:hover) #sq,#hd:has(#nm:hover) #lg{box-shadow:0 0 0 2px var(--head)}#gd{width:min(80rem,96vw);height:92vh;max-height:92vh;display:flex;flex-direction:column}#gd:not([open]){display:none}#gd iframe{flex:1;border:0;width:100%;background:#0b0d10}#rings i{position:absolute;box-sizing:border-box;border:1px solid var(--ring);border-radius:5px;pointer-events:none}#o .p{line-height:1.05;white-space:pre}#o .p:before{content:"Nuage:\\A";white-space:pre;color:var(--dim);line-height:1.5}[data-theme=day] #o .p{background:#0b0d10;color:#d8d0c0;padding:.3rem .6rem .5rem;display:inline-block;border-radius:4px}#o .r{margin:.4rem 0 .15rem;letter-spacing:.1em}#o .w{white-space:pre;line-height:1.05;margin:.4rem 0 .15rem}#g{display:flex;flex-wrap:wrap;gap:1.2rem;margin:.2rem 0 .6rem;color:var(--dim)}#g input{vertical-align:middle;width:10rem;accent-color:var(--bar2)}[data-wb-tri]{font:1rem/1.5 ui-monospace,Consolas,monospace!important;left:calc(-2.3rem - var(--col,0px))!important;color:var(--user)!important;border-color:var(--line)!important;border-radius:999px!important;padding:0 .45em!important;opacity:.76;background:var(--field)!important}[data-wb-tri]:hover{border-color:var(--dim)!important;opacity:1}#opt{margin:.2rem 0 .4rem}#gist-b{all:unset;cursor:pointer;color:var(--dim);border-bottom:1px dotted var(--dim)}#gist-b:focus-visible{outline:2px solid var(--focus)}#gist{color:var(--dim);margin:-.4rem 0 .8rem;max-height:30vh;overflow-y:auto;border-left:1px solid var(--line);padding-left:.8rem}#gist b{font-weight:normal;color:var(--ink)}#opt[open]>summary{color:var(--head)}' + '</style>');
 // at the right of the title: the themes, and the type size, both remembered
-document.getElementById('hd').insertAdjacentHTML('beforeend', '<button id=gal title="The Noctilucents: the gallery of words drawn as their sounds">\u224b Noctilucents</button><button data-th=night aria-pressed=false>\u263e Night</button><button data-th=dusk aria-pressed=false>\u25d0 Dusk</button><button data-th=day aria-pressed=false>\u2600 Day</button>' +
+document.getElementById('hd').insertAdjacentHTML('beforeend', '<button id=gal title="The Noctilucents: the gallery of words drawn as their sounds">\u224b Noctilucents</button><span class=nbc><button data-th=night aria-pressed=false>\u263e Night</button><button data-th=dusk aria-pressed=false>\u25d0 Dusk</button><button data-th=day aria-pressed=false>\u2600 Day</button></span>' +
   '<span class=nbc><span id=fs-l>Font size:</span><button id=fs-dn aria-label="Smaller type">\u2212</button><button id=fs-up aria-label="Larger type">+</button></span>' +
   '<span class=nbc><span id=cz-l>Chat:</span><button id=cz-dn aria-label="Smaller chat">\u2212</button><button id=cz-up aria-label="Larger chat">+</button></span>');   // NBC, a non-breaking control (User1): [ Label: [btn] [btn] ] is one thing and wraps as one
 document.getElementById('o').insertAdjacentHTML('afterend',
@@ -131,7 +131,7 @@ const store = { get: (k) => { try { return localStorage.getItem(k); } catch (e) 
   $('sb').appendChild($('opt-note'));
   const sp = $('split'), keep = () => store.set('nuage.split', JSON.stringify({ w: lc.style.getPropertyValue('--lw'), closed: lc.classList.contains('closed') }));
   let st = {}; try { st = JSON.parse(store.get('nuage.split') || '{}'); } catch (e) {}
-  if (st.w) lc.style.setProperty('--lw', st.w); if (st.closed || (st.closed === undefined && innerWidth < 760)) lc.classList.add('closed');
+  if (st.w) lc.style.setProperty('--lw', st.w); lc.classList.toggle('closed', !!(st.closed || (st.closed === undefined && innerWidth < 760)));   // the page arrives with the column closed (so her loader has the stage); here it opens if that is how you left it
   // ON A PHONE THE DIVIDER IS THE DOOR (User1, 12 xi 2026). Under a finger the column is not beside the talk but over it:
   // the four-pixel bar stands lit at the talk's left edge; a tap there brings the Options out across 78 percent of the
   // width, with a blank margin at their left, and the same bar, now at their right edge, sends them back. A tap on the
@@ -388,10 +388,17 @@ const shelfFor = async (q) => {
   }
 };
 let busy = false;
-const ask = async (q, who) => { noctGone = false;
+// YOUR LINE IS HEARD (User1, 12 xi 2026: "when I tap one of those links that autoprompts me (You:...), You's words are not spoken
+// as such, yet answered. I'd like to make sure to hear my words in the thread of conversation"). Two things are done about it.
+// A tapped link is a line you did not type, so it is read aloud whenever the voice is in use at all (Speak every reply, or
+// Speak every request), not only under the second. And the sound is woken here, at once, inside the tap or the keystroke
+// itself: a phone lets a page start sound only from within the gesture, and the voice is built a moment later, by which
+// time the gesture is over and the line could go unheard.
+const ask = async (q, who, tapped) => { noctGone = false;
+  if (speakReq || speakAll) { try { audio = audio || new (window.AudioContext || window.webkitAudioContext)(); if (audio.state === 'suspended') audio.resume(); } catch (e) {} }
   busy = true; try {
   say(who || 'u', q);
-  if (speakReq) { await speak(q, 0, 'you'); while (performance.now() < voiceEnd + 200) await new Promise((r) => setTimeout(r, 100)); }   // your request, by Blando, and heard out before she answers
+  if (speakReq || (tapped && speakAll)) { await speak(q, 0, 'you'); while (performance.now() < voiceEnd + 200) await new Promise((r) => setTimeout(r, 100)); }   // your request, by Blando, and heard out before she answers
   for (const f of NUAGE.before) if (await f(q)) return;   // a cut's own command, answered by the part that knows it
   await shelfFor(q); const r = N.chat(q); say('n', r); store.set('nuage.memory', N.remember()); keepGist(); sonti();
   if (N.wantsForget()) { store.del('nuage.memory'); store.del(GK); setTimeout(() => location.reload(), 1600); }
@@ -493,7 +500,7 @@ o.addEventListener('scroll', sandSoon); addEventListener('resize', sandSoon); in
 document.head.insertAdjacentHTML('beforeend', '<style>#cc{position:relative}#sandeko{position:absolute;left:0;top:0;pointer-events:none;overflow:visible;z-index:3}#sand-m{position:absolute;visibility:hidden;white-space:pre;pointer-events:none;line-height:1}</style>');
 bLinks.onclick = () => { linksOn = !linksOn; show(); save(); relink(); };
 o.addEventListener('mousemove', (e) => { o.style.cursor = linksOn && spanAt(e.clientX, e.clientY) ? 'pointer' : ''; });
-o.addEventListener('click', (e) => { if (!linksOn || String(window.getSelection()).trim()) return; const s = spanAt(e.clientX, e.clientY); if (s) ask(N.asking(s.phrase)); });
+o.addEventListener('click', (e) => { if (!linksOn || String(window.getSelection()).trim()) return; const s = spanAt(e.clientX, e.clientY); if (s) ask(N.asking(s.phrase), undefined, true); });
 bVoice.onclick = () => { voice = 'ecouter'; show(); save(); }; $('voice2').onclick = () => { voice = 'machine'; show(); save(); }; $('voice3').onclick = () => { voice = 'nuage'; show(); save(); }; $('voice4').onclick = () => { voice = 'miria'; show(); save(); }; $('voice5').onclick = () => { voice = 'arthur'; show(); save(); }; $('voice6').onclick = () => { voice = 'cast'; show(); save(); }; $('voice7').onclick = () => { voice = 'blando'; show(); save(); };   // Voice: one of two, an inline radio (User1)
 let audio = null;
 let speaking = null;
@@ -502,7 +509,7 @@ const hush = () => { voiceEnd = 0; if (speaking) { try { speaking.stop(); } catc
 { const showFleur = () => { $('fl-lg').setAttribute('aria-pressed', fleurBig); $('fl-sm').setAttribute('aria-pressed', !fleurBig); };   // Large, or Small only (User1): one on, the other off
   $('fl-lg').onclick = () => { fleurBig = true; showFleur(); save(); }; $('fl-sm').onclick = () => { fleurBig = false; showFleur(); save(); const n = $('noct'); if (n) n.hidden = true; }; showFleur(); }
 $('hush').onclick = () => { hush(); if (speakAll) { speakAll = false; showSpeak(); save(); } };   // off: quiet now, and quiet from here on
-$('again').onclick = () => { noctGone = false; if (!speakAll) { speakAll = true; showSpeak(); save(); } if (lastSaid) speak(lastSaid); };   // on: say everything from here on, and the last thing now   // the last thing said, kept, so "show it to me again" works after a waking too
+$('again').onclick = () => { noctGone = false; if (!speakAll) { speakAll = true; showSpeak(); save(); } const ns = o.querySelectorAll('.n'), t = lastSaid || (ns.length ? ns[ns.length - 1].dataset.t : ''); if (t) speak(t); };   // with nothing said yet (a first visit), Speak says her greeting, which sets the tone (User1, 12 xi 2026)   // on: say everything from here on, and the last thing now   // the last thing said, kept, so "show it to me again" works after a waking too
 const speak = async (text, most, who, stretch) => {   // one voice at a time: a new reply quiets the last. most: a clip, so many ms at most. who: for the cast. stretch: { whole, at }, a part of a sentence
   if (!text) return; cast = castOf(stretch ? stretch.whole : text, who); if (!most) { lastSaid = text; store.set('nuage.said', text); } if (speaking) { try { speaking.stop(); } catch (e) {} speaking = null; }
   const E = voice !== 'machine' && (await ec());

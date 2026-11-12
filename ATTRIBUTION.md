@@ -23,15 +23,15 @@ nuage-64k.html   98.0 KB (aim 64 KB)
   holds:  Nuage, its seed and taught cards, the pictures, and Cyc sliced to 349 of 1999 concepts
   leaves out:  Ecouter (voice, colour, the wall), Wallbreaker (tilt), the shelves (flags, sky and science), the About box in full (its summary stays), the lexicon, the AI analysis
 
-nuage-128k.html   177.0 KB (aim 128 KB)
+nuage-128k.html   177.3 KB (aim 128 KB)
   holds:  Nuage as it stands: every card, Cyc (2,000 everyday concepts), the shelves, Ecouter’s voice and the wall it draws while speaking, Wallbreaker, the lexicon, the AI analysis
   leaves out:  Mimia, Aquavit, the sound drawings in the talk
 
-nuage-256k.html   255.8 KB (aim 256 KB)
+nuage-256k.html   256.0 KB (aim 256 KB)
   holds:  the 128 cut, the sound drawings in the talk ("draw the sound of glimmer"), Aquavit and its viewer (the Aquavit button), and Mimia, 72 of her 2048 units (21.5 KB)
   leaves out:  the rest of Mimia, the word libraries (CMUdict, WordNet, Wiktionary), which stay outer
 
-nuage-1024k.html   886.1 KB (aim 1024 KB)
+nuage-1024k.html   886.4 KB (aim 1024 KB)
   holds:  the 128 cut, the sound drawings in the talk ("draw the sound of glimmer"), Aquavit and its viewer (the Aquavit button), and Mimia, 2048 of her 2048 units (494.3 KB)
   leaves out:  the word libraries (CMUdict, WordNet, Wiktionary), which stay outer
 
