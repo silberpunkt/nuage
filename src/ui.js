@@ -172,6 +172,11 @@ $('opt').open = $('lc') ? true : !!prefs.opt; if ($('ab-c')) $('ab-c').onclick =
 // of all, that sounds along while a voice speaks. Click the square to deploy the strip; click the strip to fold it.
 $('b').insertAdjacentHTML('afterend', '<div id=rl hidden><canvas id=roll role=button tabindex=0 title="The voice\'s strip: colour is pitch, brightness is strength, sparks are hiss, and time runs to the left. Click to fold it away. \u2192 At the right, the fleuriant, the wall the voice strikes: click it to hear the last thing said again, four seconds at most." aria-label="The voice\'s strip"></canvas><div id=fl role=button tabindex=0 aria-label="The fleuriant: click to hear the last thing said again"><canvas width=152 height=152 aria-hidden=true></canvas><span></span></div></div>');
 $('rl').before($('vc'));   // Speak and Shoosh are the strip's own keys (User1, 12 xi 2026): they stand directly above it, at its right, and no longer ride the credits row, where the unpacking bars could come between
+// THE UPPER CHROME STAYS (User1, 12 xi 2026: "all upperchrome, from Nuage's logo to the spectrobar, must remain fixed, as must the
+// chat entrybar"). On a phone the page itself scrolls, and the title, the meters, the bars, Speak and Shoosh and the strip used to
+// scroll away with the talk. They are gathered into one block, #top, which holds to the top of the screen while the talk passes
+// beneath it; the chat line already holds to the foot. At a desk nothing changes: there the talk scrolls inside its own frame.
+if (window.matchMedia && matchMedia('(pointer:coarse)').matches) { const top = document.createElement('div'); top.id = 'top'; $('hd').before(top); ['hd', 'at', 'b', 'vc', 'rl'].forEach((id) => { const e = $(id); if (e) top.appendChild(e); }); }
 { const rl = $('rl'), sq = $('sq'), deploy = (f) => { rl.hidden = !f; sq.setAttribute('aria-pressed', f); save(); if (f) sizeRoll(); };   // the square stays, a control: it shows the strip, and the strip folds itself
   const rc = $('roll'), fl = $('fl'); rc.onclick = () => deploy(false); rc.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); deploy(false); } }; sq.onclick = () => deploy(rl.hidden);
   fl.onclick = () => { if (lastSaid) speak(lastSaid, 4000); }; fl.onkeydown = (e) => { if ((e.key === 'Enter' || e.key === ' ') && lastSaid) { e.preventDefault(); speak(lastSaid, 4000); } };   // show it to me again
@@ -663,7 +668,8 @@ const noct = (fr, total, at) => {
     cv.onclick = () => { noctGone = true; cv.style.opacity = 0; setTimeout(() => { if (noctGone) cv.hidden = true; }, 350); }; }
   if (!fleurBig || noctGone) { cv.hidden = true; return; }
   const r0 = o.getBoundingClientRect(), room = innerWidth - r0.right - 16, out = room >= 120, sz = out ? Math.min(180, room) : 180;   // in the margin beside the talk if there is room, else in its upper right corner
-  cv.style.width = cv.style.height = sz + 'px'; cv.style.top = (r0.top + 8) + 'px'; cv.style.left = (out ? r0.right + 8 : r0.right - sz - 16) + 'px'; cv.hidden = false; cv.style.opacity = 1;
+  const up = $('top') ? Math.max(r0.top, $('top').getBoundingClientRect().bottom) : r0.top;   // under the fixed upper chrome, when the talk's own top has scrolled beneath it
+  cv.style.width = cv.style.height = sz + 'px'; cv.style.top = (up + 8) + 'px'; cv.style.left = (out ? r0.right + 8 : r0.right - sz - 16) + 'px'; cv.hidden = false; cv.style.opacity = 1;
   const g = cv.getContext('2d'), S = 360, C = S / 2, R = S * 0.45, LIFE = 1100;
   let acc = 0; const rs = fr.map((f) => { const s0 = acc; acc += f.ms; return { s0, f }; }), k = acc ? total / acc : 1;
   const hue = (hz) => 280 * Math.max(0, Math.min(1, Math.log(Math.max(250, hz) / 250) / Math.log(14)));
