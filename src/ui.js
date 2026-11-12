@@ -127,7 +127,7 @@ const store = { get: (k) => { try { return localStorage.getItem(k); } catch (e) 
 // their own; the divider beside it drags to widen and clicks to close or open, and remembers both. The panel's note
 // and the app's state go to the statusbar at the foot.
 { const lc = $('lc'); if (lc) {
-  lc.insertAdjacentHTML('afterbegin', '<h2 class=lch>Options</h2>'); lc.appendChild($('opt')); lc.appendChild($('t')); { const cl = document.createElement('div'); cl.id = 'cl'; cl.appendChild($('hue')); cl.appendChild($('g')); lc.appendChild(cl); } if ($('c')) $('at').appendChild($('c')); $('at').insertAdjacentHTML('beforeend', '<span id=vc><button id=again title="Say the last thing again">Speak</button><button id=hush title="Quiet the voice">Shoosh</button></span>');   // the voice's two words, always at hand, at the right of the credits row (User1)   // Colour leads a row with its Vivid and Light bars; the switches stand in the column itself, so the workshop panel beneath them can take the room that is left; the credits stand in the row under the title, above the graph upward
+  lc.insertAdjacentHTML('afterbegin', '<h2 class=lch>Options</h2>'); lc.appendChild($('opt')); lc.appendChild($('t')); { const cl = document.createElement('div'); cl.id = 'cl'; cl.appendChild($('hue')); cl.appendChild($('g')); lc.appendChild(cl); } if ($('c')) { const sf = $('sf'); sf.removeAttribute('aria-hidden'); sf.appendChild($('c')); }   /* THE CREDITS AT THE FOOT (User1, 12 xi 2026): above the status line, where the page's own scroll shows or hides them, so the eye runs from her name straight to the talk */ $('at').insertAdjacentHTML('beforeend', '<span id=vc><button id=again title="Say the last thing again">Speak</button><button id=hush title="Quiet the voice">Shoosh</button></span>');   // the voice's two words, always at hand, at the right of the credits row (User1)   // Colour leads a row with its Vivid and Light bars; the switches stand in the column itself, so the workshop panel beneath them can take the room that is left; the credits stand in the row under the title, above the graph upward
   $('sb').appendChild($('opt-note'));
   const sp = $('split'), keep = () => store.set('nuage.split', JSON.stringify({ w: lc.style.getPropertyValue('--lw'), closed: lc.classList.contains('closed') }));
   let st = {}; try { st = JSON.parse(store.get('nuage.split') || '{}'); } catch (e) {}
@@ -164,7 +164,7 @@ let speakAll = !!prefs.speak, speakReq = !!prefs.speakReq, chatZoom = prefs.chat
 const MODES = ['off', 'viriditas', 'vivificat', 'omnia', 'tincture'], NAMES = { off: 'off', viriditas: 'Viriditas', vivificat: 'Vivificat', omnia: 'Omnia', tincture: 'Tincture' };
 let mode = MODES.indexOf(prefs.mode) >= 0 ? prefs.mode : 'tincture', tilt = prefs.tilt !== false, voice = /^(machine|nuage|miria|arthur|ecouter|blando)$/.test(prefs.voice) ? prefs.voice : 'cast';
 let vivid = prefs.vivid >= 0 ? prefs.vivid : 1, light = prefs.light > 0 ? prefs.light : 1;
-const save = () => store.set('nuage.prefs', JSON.stringify({ speak: speakAll, speakReq, tiltState, chat: chatZoom, mode, tilt, voice, vivid, light, wyrd: wyrdOn, rail: railOn, sand: sandOn, links: linksOn, fleur: fleurBig ? 'large' : 'small', theme, size, opt: $('opt').open, bar: !$('b').hidden, strip: !$('rl').hidden }));
+const save = () => store.set('nuage.prefs', JSON.stringify({ speak: speakAll, speakReq, tiltState, chat: chatZoom, mode, tilt, voice, vivid, light, wyrd: wyrdOn, rail: railOn, sand: sandOn, links: linksOn, fleur: fleurBig ? 'large' : 'small', theme, size, opt: $('opt').open, bar: !$('b').hidden, strip: H.ln ? !$('rl').hidden : prefs.strip }));
 // Options and Credits fold away, since a large type makes height dear; each remembers whether it was open
 $('opt').open = $('lc') ? true : !!prefs.opt; if ($('ab-c')) $('ab-c').onclick = () => $('nm').click();   // the credits line opens About, where the many more are named
 // THE LOGO: the unpacker graph folds on a click into a mark before her name, and unfolds on another (User1, 3 xi 2026)
@@ -175,7 +175,10 @@ $('rl').before($('vc'));   // Speak and Shoosh are the strip's own keys (User1, 
 { const rl = $('rl'), sq = $('sq'), deploy = (f) => { rl.hidden = !f; sq.setAttribute('aria-pressed', f); save(); if (f) sizeRoll(); };   // the square stays, a control: it shows the strip, and the strip folds itself
   const rc = $('roll'), fl = $('fl'); rc.onclick = () => deploy(false); rc.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); deploy(false); } }; sq.onclick = () => deploy(rl.hidden);
   fl.onclick = () => { if (lastSaid) speak(lastSaid, 4000); }; fl.onkeydown = (e) => { if ((e.key === 'Enter' || e.key === ' ') && lastSaid) { e.preventDefault(); speak(lastSaid, 4000); } };   // show it to me again
-  if (prefs.strip !== false) { rl.hidden = false; sq.setAttribute('aria-pressed', 'true'); } }
+  if (prefs.strip !== false && H.ln) { rl.hidden = false; sq.setAttribute('aria-pressed', 'true'); }
+  // NO SOUND TO READ, NO STRIP (User1, 12 xi 2026): the smallest cut carries no Ecouter and speaks with the system's voice,
+  // which gives the page nothing to draw. So there the strip, its square in the title, and the Fleuriant's switch are put away.
+  if (!H.ln) { rl.hidden = true; sq.hidden = true; const fz = $('fl-lg'); if (fz) fz.parentNode.hidden = true; } }
 { const b = $('b'), lg = $('lg'), fold = (f) => { b.hidden = f; lg.hidden = !f; save(); };
   b.tabIndex = 0; b.setAttribute('role', 'button'); b.title = 'Click to fold the graph into her mark.'; b.onclick = () => fold(true); b.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fold(true); } };
   lg.onclick = () => fold(false); }
@@ -367,7 +370,7 @@ const quoteLinks = (p) => {   // read across the painted letters: the quoted wor
     for (const [node, o0, o1] of parts.reverse()) { const r = document.createRange(); r.setStart(node, o0); r.setEnd(node, o1); const sp = document.createElement('span'); sp.className = 'qt'; sp.dataset.q = word; sp.title = 'Click to say it.'; try { r.surroundContents(sp); } catch (e) {} }
   }
 };
-o.addEventListener('click', (e) => { const q = e.target.closest('.qt'); if (!q || q.closest('.td') || e.defaultPrevented || String(window.getSelection()).trim()) return; const w = (q.dataset.q || q.textContent).trim().replace(/[.,;:!?]+$/, ''); if (w) ask(w); });
+o.addEventListener('click', (e) => { const q = e.target.closest('.qt'); if (!q || q.closest('.td') || e.defaultPrevented || String(window.getSelection()).trim()) return; const w = (q.dataset.q || q.textContent).trim().replace(/[.,;:!?]+$/, ''); if (w) ask(w, undefined, true); });   // tapped, so it is read aloud as your line, like a link (User1, 12 xi 2026)
 const say = (who, s) => {
   const p = document.createElement('div'); if (who === 'n' && isPicture(s)) who = 'p'; p.className = who; p.dataset.t = s;
   if (who === 'n' && castOf(s, 'n') === 'arthur') p.classList.add('canon');   // the house's own lines are the Canon's, and say so (User1: Arthur's voice under "Nuage:" hassles the script-reading mind)
