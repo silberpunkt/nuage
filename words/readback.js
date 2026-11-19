@@ -12,7 +12,7 @@
 const fs = require('fs'), path = require('path');
 const HERE = __dirname, first = (c) => c.find((p) => p && fs.existsSync(p));
 const LIBS = first([process.env.NUAGE_LIBS, path.join(HERE, '..', '..', '__libs')]) || '';
-const ECO = first([path.join(HERE, '..', '..', '..', '__entile', '__vespers', 'ecouter'), path.join(HERE, '..', '..', '..', '..', '__vespers', 'ecouter')]);
+const ECO = first([path.join(HERE, '..', '..', '..', '____projects', 'ecouter'), path.join(HERE, '..', '..', '..', '..', '____projects', 'ecouter')]);   // Ecouter's workshop, in its own project folder since 19 xi 2026 (it stood inside Vespers before); the second is for this file's copy in the repository
 const LEX = require(path.join(ECO, 'lexillogue.js')), PH = require(path.join(ECO, 'phones.js'));
 const VOW = new Set(['IY', 'IH', 'EY', 'EH', 'AE', 'AA', 'AO', 'OW', 'UH', 'UW', 'ER', 'AX', 'AH', 'AY', 'AW', 'OY']);
 const CMU2NRL = { AH0: 'AX', HH: 'h', JH: 'j', B: 'b', D: 'd', F: 'f', G: 'g', K: 'k', L: 'l', M: 'm', N: 'n', P: 'p', R: 'r', S: 's', T: 't', V: 'v', W: 'w', Y: 'y', Z: 'z' };

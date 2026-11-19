@@ -18,7 +18,7 @@ const fs = require('fs'), path = require('path');
 const HERE = __dirname;
 const first = (cands) => cands.find((p) => p && fs.existsSync(p));
 const LIBS = first([process.env.NUAGE_LIBS, path.join(HERE, '..', '..', '__libs')]) || '';
-const LEXI = first([process.env.NUAGE_LEXILLOGUE, path.join(HERE, '..', '..', '..', '__entile', '__vespers', 'ecouter', 'lexillogue.js'), path.join(HERE, '..', '..', '..', '..', '__vespers', 'ecouter', 'lexillogue.js')]);
+const LEXI = first([process.env.NUAGE_LEXILLOGUE, path.join(HERE, '..', '..', '..', '____projects', 'ecouter', 'lexillogue.js'), path.join(HERE, '..', '..', '..', '..', '____projects', 'ecouter', 'lexillogue.js')]);
 
 // ---- PHONAESTHEMES: clusters of sound that recur in words of like meaning. The claims are old (Firth 1930, who named
 // them; Bloomfield 1933; Marchand 1969), and two were tested by experiment (gl- and sn-, Bergen 2004, where readers

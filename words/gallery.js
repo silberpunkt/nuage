@@ -6,7 +6,7 @@
 const fs = require('fs'), path = require('path'), T = require('./teardown.js');
 const ws = process.argv.slice(2);
 const esc = (x) => String(x).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
-const ECO = [process.env.NUAGE_ECOUTER, path.join(__dirname, '..', '..', '..', '__entile', '__vespers', 'ecouter'), path.join(__dirname, '..', '..', '..', '..', '__vespers', 'ecouter')].find((d) => d && fs.existsSync(path.join(d, 'voicebox.js')));
+const ECO = [process.env.NUAGE_ECOUTER, path.join(__dirname, '..', '..', '..', '____projects', 'ecouter'), path.join(__dirname, '..', '..', '..', '..', '____projects', 'ecouter')].find((d) => d && fs.existsSync(path.join(d, 'voicebox.js')));
 let rows = '';
 for (const w of ws) {
   const t = T.tear(w), f = t.figures;

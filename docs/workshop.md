@@ -143,7 +143,7 @@ She copies manner, not knowledge. On a first test, with Nuage itself as the teac
 **Words, torn down (`words/`).** An outer frame for Nuage's word-knowing, never packed into the page. Type a word into "Tear down a word" in the panel, and its card appears in the conversation:
 
 - its sounds: CMUdict's phonemes and stress, Wiktionary's IPA, and the NRL 1976 letter-to-sound reading by Vespers'
-  Lexillogue (`__entile/__vespers/ecouter/lexillogue.js`), which reads any word at all;
+  Lexillogue (`____projects/ecouter/lexillogue.js`), which reads any word at all;
 - the mouth's path, vowel by vowel, high or low and front or back, because sounds are movies;
 - its felt sense: phonaesthemes such as gl- (light and seeing) and sn- (the nose), each with its source (Firth 1930,
   Bloomfield 1933, Marchand 1969, and Bergen 2004, who tested gl- and sn-), and the small or large stressed vowel
