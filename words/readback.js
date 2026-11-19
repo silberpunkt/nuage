@@ -11,7 +11,7 @@
    Nothing here is a fact about the world: it is a guess at a mirror's mumble, said with how sure the guess is. */
 const fs = require('fs'), path = require('path');
 const HERE = __dirname, first = (c) => c.find((p) => p && fs.existsSync(p));
-const LIBS = first([process.env.NUAGE_LIBS, path.join(HERE, '..', '..', '__libs')]) || '';
+const LIBS = first([process.env.NUAGE_LIBS, path.join(HERE, '..', '..', '__libs'), path.join(HERE, '..', '..', '..', '__libs')]) || '';   // beside the folder this stands in; or one further up, where this file is the copy inside a repository that itself stands in the workshop
 const ECO = first([path.join(HERE, '..', '..', '..', '____projects', 'ecouter'), path.join(HERE, '..', '..', '..', '..', '____projects', 'ecouter')]);   // Ecouter's workshop, in its own project folder since 19 xi 2026 (it stood inside Vespers before); the second is for this file's copy in the repository
 const LEX = require(path.join(ECO, 'lexillogue.js')), PH = require(path.join(ECO, 'phones.js'));
 const VOW = new Set(['IY', 'IH', 'EY', 'EH', 'AE', 'AA', 'AO', 'OW', 'UH', 'UW', 'ER', 'AX', 'AH', 'AY', 'AW', 'OY']);
